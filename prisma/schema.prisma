@@ -1,0 +1,298 @@
+generator client {
+  provider = "prisma-client-js"
+  
+}
+
+datasource db {
+  provider = "postgresql"
+
+}
+
+// ============================================================
+// ENUMS
+// ============================================================
+
+enum Role {
+  ADMIN
+  CASHIER
+}
+
+enum OrderStatus {
+  PENDING
+  PREPARING
+  READY
+  DELIVERED
+  CANCELLED
+}
+
+enum PaymentMethod {
+  CASH
+  INSTAPAY
+  VODAFONE_CASH
+}
+
+// ============================================================
+// USER
+// No public registration — Admin creates users only
+// ============================================================
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(CASHIER)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  orders     Order[]
+  shifts     Shift[]
+  auditLogs  AuditLog[]
+
+  @@index([email])
+  @@index([role])
+  @@map("users")
+}
+
+// ============================================================
+// CATEGORY
+// ============================================================
+
+model Category {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  imageUrl  String?
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  products  Product[]
+
+  @@index([active])
+  @@map("categories")
+}
+
+// ============================================================
+// PRODUCT
+// ============================================================
+
+model Product {
+  id          String   @id @default(uuid())
+  categoryId  String
+  name        String
+  description String?
+  imageUrl    String?
+  basePrice   Decimal  @db.Decimal(10, 2)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  category        Category         @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  productFlavors  ProductFlavor[]
+  orderItems      OrderItem[]
+  inventory       Inventory?
+
+  @@index([categoryId])
+  @@index([active])
+  @@map("products")
+}
+
+// ============================================================
+// FLAVOR
+// ============================================================
+
+model Flavor {
+  id              String   @id @default(uuid())
+  name            String   @unique
+  additionalPrice Decimal  @default(0) @db.Decimal(10, 2)
+  active          Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  productFlavors   ProductFlavor[]
+  orderItemFlavors OrderItemFlavor[]
+
+  @@index([active])
+  @@map("flavors")
+}
+
+// ============================================================
+// PRODUCT FLAVOR (Many-to-Many junction)
+// Which flavors are available for which products
+// ============================================================
+
+model ProductFlavor {
+  id        String @id @default(uuid())
+  productId String
+  flavorId  String
+
+  // Relations
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  flavor  Flavor  @relation(fields: [flavorId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, flavorId])
+  @@index([productId])
+  @@index([flavorId])
+  @@map("product_flavors")
+}
+
+// ============================================================
+// INVENTORY
+// One inventory record per product
+// ============================================================
+
+model Inventory {
+  id        String   @id @default(uuid())
+  productId String   @unique
+  quantity  Int      @default(0)
+  lowStock  Int      @default(10) // alert threshold
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@index([quantity])
+  @@map("inventory")
+}
+
+// ============================================================
+// ORDER
+// ============================================================
+
+model Order {
+  id            String        @id @default(uuid())
+  orderNumber   String        @unique
+  cashierId     String
+  subtotal      Decimal       @db.Decimal(10, 2)
+  discount      Decimal       @default(0) @db.Decimal(10, 2)
+  tax           Decimal       @default(0) @db.Decimal(10, 2)
+  total         Decimal       @db.Decimal(10, 2)
+  paymentMethod PaymentMethod @default(CASH)
+  status        OrderStatus   @default(PENDING)
+  notes         String?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  // Relations
+  cashier    User        @relation(fields: [cashierId], references: [id], onDelete: Restrict)
+  orderItems OrderItem[]
+
+  @@index([cashierId])
+  @@index([status])
+  @@index([createdAt])
+  @@index([orderNumber])
+  @@map("orders")
+}
+
+// ============================================================
+// ORDER ITEM
+// ============================================================
+
+model OrderItem {
+  id        String  @id @default(uuid())
+  orderId   String
+  productId String
+  quantity  Int
+  unitPrice Decimal @db.Decimal(10, 2)
+  notes     String?
+
+  // Relations
+  order            Order             @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product          Product           @relation(fields: [productId], references: [id], onDelete: Restrict)
+  orderItemFlavors OrderItemFlavor[]
+
+  @@index([orderId])
+  @@index([productId])
+  @@map("order_items")
+}
+
+// ============================================================
+// ORDER ITEM FLAVOR
+// Which flavors were selected for each order item
+// ============================================================
+
+model OrderItemFlavor {
+  id          String @id @default(uuid())
+  orderItemId String
+  flavorId    String
+
+  // Relations
+  orderItem OrderItem @relation(fields: [orderItemId], references: [id], onDelete: Cascade)
+  flavor    Flavor    @relation(fields: [flavorId], references: [id], onDelete: Restrict)
+
+  @@unique([orderItemId, flavorId])
+  @@index([orderItemId])
+  @@map("order_item_flavors")
+}
+
+// ============================================================
+// SHIFT
+// Cashier opens/closes shift — tracks daily work session
+// ============================================================
+
+model Shift {
+  id         String    @id @default(uuid())
+  cashierId  String
+  openedAt   DateTime  @default(now())
+  closedAt   DateTime?
+  salesTotal Decimal   @default(0) @db.Decimal(10, 2)
+  orderCount Int       @default(0)
+  notes      String?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  // Relations
+  cashier User @relation(fields: [cashierId], references: [id], onDelete: Restrict)
+
+  @@index([cashierId])
+  @@index([openedAt])
+  @@index([closedAt])
+  @@map("shifts")
+}
+
+// ============================================================
+// AUDIT LOG
+// Tracks all important actions in the system
+// ============================================================
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  userId    String
+  action    String
+  entity    String?  // which model was affected (e.g. "Order", "Product")
+  entityId  String?  // the ID of the affected record
+  metadata  Json?    // extra context (old values, new values, etc.)
+  createdAt DateTime @default(now())
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Restrict)
+
+  @@index([userId])
+  @@index([entity, entityId])
+  @@index([createdAt])
+  @@map("audit_logs")
+}
+
+// ============================================================
+// REFRESH TOKEN
+// For JWT refresh token rotation
+// ============================================================
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  revoked   Boolean  @default(false)
+
+  @@index([token])
+  @@index([userId])
+  @@map("refresh_tokens")
+}
