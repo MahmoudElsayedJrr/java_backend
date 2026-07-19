@@ -198,6 +198,16 @@ class ReportController {
     }
   }
 
+  async custom(req, res, next) {
+    try {
+      sendSuccess(res, {
+        data: await reportService.custom(req.query.from, req.query.to),
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
+
   async weekly(req, res, next) {
     try {
       sendSuccess(res, {

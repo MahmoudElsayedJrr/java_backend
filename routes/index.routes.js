@@ -42,6 +42,7 @@ orderRouter.patch('/:id/status', authorize('ADMIN', 'CASHIER'), validate(ov.upda
 // ── Reports ───────────────────────────────────────────────────
 const reportRouter = express.Router();
 reportRouter.use(authenticate, authorize('ADMIN'));
+reportRouter.get('/custom', rc.custom);
 reportRouter.get('/daily',   rc.daily);
 reportRouter.get('/weekly',  rc.weekly);
 reportRouter.get('/monthly', rc.monthly);
