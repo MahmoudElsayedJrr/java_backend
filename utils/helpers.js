@@ -4,16 +4,16 @@
  */
 const generateOrderNumber = async (prisma) => {
   const today = new Date();
-  const datePart = today.toISOString().slice(0, 10).replace(/-/g, '');
+  const datePart = today.toISOString().slice(0, 10).replace(/-/g, "");
 
-  const startOfDay = new Date(today.setHours(0, 0, 0, 0));
-  const endOfDay   = new Date(today.setHours(23, 59, 59, 999));
-
+  // عد كل الأوردرات اللي orderNumber بيبدأ بـ JC-YYYYMMDD
   const count = await prisma.order.count({
-    where: { createdAt: { gte: startOfDay, lte: endOfDay } },
+    where: {
+      orderNumber: { startsWith: `JC-${datePart}` },
+    },
   });
 
-  const sequence = String(count + 1).padStart(4, '0');
+  const sequence = String(count + 1).padStart(4, "0");
   return `JC-${datePart}-${sequence}`;
 };
 
@@ -27,11 +27,11 @@ const calculateOrderTotals = (items, discountPercent = 0, taxRate = 0) => {
     return sum + parseFloat(item.unitPrice) * item.quantity;
   }, 0);
 
-  const pct      = Math.min(100, Math.max(0, parseFloat(discountPercent) || 0));
+  const pct = Math.min(100, Math.max(0, parseFloat(discountPercent) || 0));
   const discount = parseFloat(((subtotal * pct) / 100).toFixed(2));
-  const taxable  = subtotal - discount;
-  const tax      = parseFloat(((taxable * taxRate) / 100).toFixed(2));
-  const total    = parseFloat((taxable + tax).toFixed(2));
+  const taxable = subtotal - discount;
+  const tax = parseFloat(((taxable * taxRate) / 100).toFixed(2));
+  const total = parseFloat((taxable + tax).toFixed(2));
 
   return {
     subtotal: parseFloat(subtotal.toFixed(2)),
@@ -46,7 +46,7 @@ const calculateOrderTotals = (items, discountPercent = 0, taxRate = 0) => {
  */
 const stripUndefined = (obj) => {
   return Object.fromEntries(
-    Object.entries(obj).filter(([, v]) => v !== undefined)
+    Object.entries(obj).filter(([, v]) => v !== undefined),
   );
 };
 
@@ -54,8 +54,8 @@ const stripUndefined = (obj) => {
  * Convert string to boolean safely
  */
 const toBoolean = (value) => {
-  if (typeof value === 'boolean') return value;
-  if (typeof value === 'string')  return value.toLowerCase() === 'true';
+  if (typeof value === "boolean") return value;
+  if (typeof value === "string") return value.toLowerCase() === "true";
   return Boolean(value);
 };
 
@@ -63,9 +63,9 @@ const toBoolean = (value) => {
  * Parse pagination query params with safe defaults
  */
 const parsePagination = (query) => {
-  const page  = Math.max(1,   parseInt(query.page  || 1,   10));
-  const limit = Math.min(100, parseInt(query.limit || 10,  10));
-  const skip  = (page - 1) * limit;
+  const page = Math.max(1, parseInt(query.page || 1, 10));
+  const limit = Math.min(100, parseInt(query.limit || 10, 10));
+  const skip = (page - 1) * limit;
   return { page, limit, skip };
 };
 

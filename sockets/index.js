@@ -19,15 +19,17 @@ const initSocket = (httpServer) => {
   // JWT auth middleware for socket connections
   io.use((socket, next) => {
     try {
-      const token = extractBearerToken(
-        socket.handshake.auth?.token || socket.handshake.headers?.authorization
-      );
+      const authHeader = socket.handshake.auth?.token || socket.handshake.headers?.authorization;
+      if (!authHeader) return next(new Error('Authentication required'));
+
+      const token = authHeader.startsWith('Bearer ') ? authHeader.substring(7) : authHeader;
       if (!token) return next(new Error('Authentication required'));
 
       const decoded    = verifyAccessToken(token);
       socket.user      = decoded;
       next();
-    } catch {
+    } catch (e) {
+      logger.error(`[Socket Auth Error] ${e.message}`);
       next(new Error('Invalid token'));
     }
   });

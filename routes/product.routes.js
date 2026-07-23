@@ -1,5 +1,7 @@
 const router = require('express').Router();
+
 const ctrl   = require('../controllers/product.controller');
+
 const { authenticate, authorize } = require('../middlewares/auth');
 const { validate, validateQuery } = require('../middlewares/validate');
 const upload = require('../config/multer');

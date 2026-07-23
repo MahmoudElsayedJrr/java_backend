@@ -1,7 +1,6 @@
 const productRepo   = require('../repositories/product.repository');
 const categoryRepo  = require('../repositories/category.repository');
 const flavorRepo    = require('../repositories/flavor.repository');
-const inventoryRepo = require('../repositories/inventory.repository');
 const auditLogRepo  = require('../repositories/auditLog.repository');
 const prisma        = require('../config/prisma');
 const { uploadProductImage, deleteProductImage } = require('../utils/storage');
@@ -56,11 +55,6 @@ class ProductService {
           data: flavorIds.map((flavorId) => ({ productId: created.id, flavorId })),
         });
       }
-
-      // 3. Create inventory record
-      await tx.inventory.create({
-        data: { productId: created.id, quantity: initialStock, lowStock },
-      });
 
       return created;
     });

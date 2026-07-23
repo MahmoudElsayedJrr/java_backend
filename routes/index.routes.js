@@ -1,50 +1,135 @@
-const express = require('express');
+const express = require("express");
 const {
-  flavorController:    fc,
-  inventoryController: ic,
-  orderController:     oc,
-  reportController:    rc,
-} = require('../controllers/index');
-const { authenticate, authorize } = require('../middlewares/auth');
-const { validate, validateQuery } = require('../middlewares/validate');
-const v  = require('../validators/flavor.validator');
-const iv = require('../validators/inventory-shift.validator');
-const ov = require('../validators/order.validator');
+  flavorController: fc,
+  orderController: oc,
+  reportController: rc,
+  stockController: stc,
+} = require("../controllers/index");
+
+const { authenticate, authorize } = require("../middlewares/auth");
+const { validate, validateQuery } = require("../middlewares/validate");
+
+const sv = require("../validators/stockItem.validator");
+const v = require("../validators/flavor.validator");
+const iv = require("../validators/inventory-shift.validator");
+const ov = require("../validators/order.validator");
 
 // ── Flavors ──────────────────────────────────────────────────
 const flavorRouter = express.Router();
 flavorRouter.use(authenticate);
-flavorRouter.get('/active',  fc.getAllActive);
-flavorRouter.get('/',        validateQuery(v.listQuery), fc.getAll);
-flavorRouter.get('/:id',     fc.getById);
-flavorRouter.post('/',       authorize('ADMIN'), validate(v.create), fc.create);
-flavorRouter.patch('/:id',   authorize('ADMIN'), validate(v.update), fc.update);
-flavorRouter.delete('/:id',  authorize('ADMIN'), fc.delete);
+flavorRouter.get("/active", fc.getAllActive);
+flavorRouter.get("/", validateQuery(v.listQuery), fc.getAll);
+flavorRouter.get("/:id", fc.getById);
+flavorRouter.post("/", authorize("ADMIN"), validate(v.create), fc.create);
+flavorRouter.patch("/:id", authorize("ADMIN"), validate(v.update), fc.update);
+flavorRouter.delete("/:id", authorize("ADMIN"), fc.delete);
+
+// ── Stock ────────────────────────────────────────────────────
+const stockRouter = express.Router();
+stockRouter.use(authenticate, authorize("ADMIN"));
+stockRouter.get("/", validateQuery(sv.listQuery), stc.getAll);
+stockRouter.get("/low-stock", stc.getLowStock);
+stockRouter.get("/:id", stc.getById);
+stockRouter.post("/", validate(sv.create), stc.create);
+stockRouter.patch("/:id", validate(sv.update), stc.update);
+stockRouter.post("/:id/add", validate(sv.adjustQuantity), stc.addQuantity);
+stockRouter.post(
+  "/:id/deduct",
+  validate(sv.adjustQuantity),
+  stc.deductQuantity,
+);
+stockRouter.delete("/:id", stc.delete);
 
 // ── Inventory ─────────────────────────────────────────────────
-const inventoryRouter = express.Router();
-inventoryRouter.use(authenticate, authorize('ADMIN'));
-inventoryRouter.get('/',                        ic.getAll);
-inventoryRouter.get('/low-stock',               ic.getLowStock);
-inventoryRouter.get('/product/:productId',      ic.getByProduct);
-inventoryRouter.put('/product/:productId',      validate(iv.updateInventory), ic.update);
-inventoryRouter.post('/product/:productId/add', validate(iv.addStock),        ic.addStock);
+/* const inventoryRouter = express.Router();
+inventoryRouter.use(authenticate, authorize("ADMIN"));
+inventoryRouter.get("/", ic.getAll);
+inventoryRouter.get("/low-stock", ic.getLowStock);
+inventoryRouter.get("/product/:productId", ic.getByProduct);
+inventoryRouter.put(
+  "/product/:productId",
+  validate(iv.updateInventory),
+  ic.update,
+);
+inventoryRouter.post(
+  "/product/:productId/add",
+  validate(iv.addStock),
+  ic.addStock,
+); */
 
 // ── Orders ────────────────────────────────────────────────────
 const orderRouter = express.Router();
 orderRouter.use(authenticate);
-orderRouter.post('/',            authorize('ADMIN', 'CASHIER'), validate(ov.create),        oc.create);
-orderRouter.get('/my',           authorize('ADMIN', 'CASHIER'), validateQuery(ov.listQuery), oc.getMyOrders);
-orderRouter.get('/',             authorize('ADMIN'),            validateQuery(ov.listQuery), oc.getAll);
-orderRouter.get('/:id',          authorize('ADMIN', 'CASHIER'), oc.getById);
-orderRouter.patch('/:id/status', authorize('ADMIN', 'CASHIER'), validate(ov.updateStatus),  oc.updateStatus);
+
+// Customer
+orderRouter.get(
+  "/my-orders",
+  authorize("CUSTOMER"),
+  validateQuery(ov.listQuery),
+  oc.getMyCustomerOrders,
+);
+orderRouter.get(
+  "/my-orders/:id",
+  authorize("CUSTOMER"),
+  oc.getCustomerOrderById,
+);
+orderRouter.post(
+  "/",
+  authorize("ADMIN", "CASHIER", "CUSTOMER"),
+  validate(ov.create),
+  oc.create,
+);
+
+// Cashier
+orderRouter.get(
+  "/my",
+  authorize("ADMIN", "CASHIER"),
+  validateQuery(ov.listQuery),
+  oc.getMyOrders,
+);
+
+// Admin + Cashier — confirm payment
+orderRouter.patch(
+  "/:id/confirm-payment",
+  authorize("ADMIN", "CASHIER"),
+  oc.confirmPayment,
+);
+
+// Admin + Cashier — update status
+orderRouter.patch(
+  "/:id/status",
+  authorize("ADMIN", "CASHIER"),
+  validate(ov.updateStatus),
+  oc.updateStatus,
+);
+
+// Admin only
+orderRouter.get(
+  "/delivery",
+  authorize("ADMIN", "CASHIER"),
+  validateQuery(ov.listQuery),
+  oc.getDeliveryOrders,
+);
+orderRouter.get(
+  "/dine-in",
+  authorize("ADMIN"),
+  validateQuery(ov.listQuery),
+  oc.getDineInOrders,
+);
+orderRouter.get(
+  "/",
+  authorize("ADMIN", "CASHIER"),
+  validateQuery(ov.listQuery),
+  oc.getAll,
+);
+orderRouter.get("/:id", authorize("ADMIN", "CASHIER"), oc.getById);
 
 // ── Reports ───────────────────────────────────────────────────
 const reportRouter = express.Router();
-reportRouter.use(authenticate, authorize('ADMIN'));
-reportRouter.get('/custom', rc.custom);
-reportRouter.get('/daily',   rc.daily);
-reportRouter.get('/weekly',  rc.weekly);
-reportRouter.get('/monthly', rc.monthly);
+reportRouter.use(authenticate, authorize("ADMIN"));
+reportRouter.get("/daily", rc.daily);
+reportRouter.get("/weekly", rc.weekly);
+reportRouter.get("/monthly", rc.monthly);
+reportRouter.get("/custom", rc.custom);
 
-module.exports = { flavorRouter, inventoryRouter, orderRouter, reportRouter };
+module.exports = { flavorRouter, orderRouter, reportRouter, stockRouter };
