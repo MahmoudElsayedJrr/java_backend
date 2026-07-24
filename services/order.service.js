@@ -26,6 +26,24 @@ const { getIO } = require("../sockets");
 
 const TAX_RATE = parseFloat(process.env.TAX_RATE || 0);
 
+function getShippingFeeForAddress(address) {
+  if (!address) return 10;
+  const mainAddress = address.split('|')[0].trim();
+  if (mainAddress.includes("البلد")) {
+    return 40;
+  }
+  if (mainAddress.includes("المدينه") || mainAddress.includes("المدينة")) {
+    let fee = 10;
+    if (mainAddress.includes("التوفيق") || mainAddress.includes("75") || mainAddress.includes("شارع الجامعه") || mainAddress.includes("شارع الجامعة")) {
+      fee += 5;
+    } else if (mainAddress.includes("سكن الجامعه") || mainAddress.includes("سكن الجامعة") || mainAddress.includes("المنخفض") || mainAddress.includes("التعمير") || mainAddress.includes("مساكن الري")) {
+      fee += 10;
+    }
+    return fee;
+  }
+  return 10; // default fallback
+}
+
 class OrderService {
   // ── Admin: all orders ─────────────────────────────────────
   async getAll(query) {
@@ -189,7 +207,7 @@ class OrderService {
     );
 
     const totals = calculateOrderTotals(enrichedItems, discount, TAX_RATE);
-    const shippingFee = orderType === ORDER_TYPE.DELIVERY ? SHIPPING_FEE : 0;
+    const shippingFee = orderType === ORDER_TYPE.DELIVERY ? getShippingFeeForAddress(deliveryAddress) : 0;
     const finalTotal = parseFloat((totals.total + shippingFee).toFixed(2));
 
     const order = await prisma.$transaction(async (tx) => {
