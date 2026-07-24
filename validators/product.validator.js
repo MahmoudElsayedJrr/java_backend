@@ -5,6 +5,7 @@ const create = Joi.object({
   name:         Joi.string().trim().min(2).max(150).required(),
   description:  Joi.string().trim().max(500).allow('', null),
   basePrice:    Joi.number().positive().precision(2).required(),
+  discount:     Joi.number().min(0).max(100).precision(2).default(0.0),
   active:       Joi.boolean().default(true),
   flavorIds:    Joi.array().items(Joi.string().uuid()).default([]),
   initialStock: Joi.number().integer().min(0).default(0),
@@ -16,6 +17,7 @@ const update = Joi.object({
   name:        Joi.string().trim().min(2).max(150),
   description: Joi.string().trim().max(500).allow('', null),
   basePrice:   Joi.number().positive().precision(2),
+  discount:    Joi.number().min(0).max(100).precision(2),
   active:      Joi.boolean(),
   flavorIds:   Joi.array().items(Joi.string().uuid()),
 }).min(1);

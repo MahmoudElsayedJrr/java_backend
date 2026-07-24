@@ -40,6 +40,7 @@ class ProductRepository extends BaseRepository {
         id: true,
         name: true,
         basePrice: true,
+        discount: true,
         active: true,
         productFlavors: {
           select: {

@@ -165,11 +165,15 @@ class OrderService {
           }, 0);
         }
 
+        const basePrice = parseFloat(product.basePrice);
+        const discountVal = parseFloat(product.discount || 0);
+        const discountedPrice = discountVal > 0 ? basePrice * (1 - discountVal / 100) : basePrice;
+
         return {
           productId: item.productId,
 
           quantity: item.quantity,
-          unitPrice: parseFloat(product.basePrice) + flavorAdditional,
+          unitPrice: discountedPrice + flavorAdditional,
           notes: item.notes || null,
           flavorIds: item.flavorIds || [],
           available: product.inventory?.quantity ?? 0,
