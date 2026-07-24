@@ -33,10 +33,7 @@ class OrderRepository extends BaseRepository {
   findAllPaginated({ skip, take, where = {} }) {
     return this.findWithPagination({
       where,
-      include: {
-        cashier: { select: { id: true, name: true } },
-        orderItems: { select: { id: true, quantity: true, unitPrice: true } },
-      },
+      include: ORDER_INCLUDE,
       orderBy: { createdAt: "desc" },
       skip,
       take,

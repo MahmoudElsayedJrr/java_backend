@@ -143,10 +143,16 @@ class OrderService {
     const enrichedItems = await Promise.all(
       items.map(async (item) => {
         const product = await productRepo.findForOrder(item.productId);
-        if (!product)
+        if (!product) {
           throw new NotFoundError(
-            `Product ${item.productId} not found or inactive`,
+            `Product not found`,
           );
+        }
+        if (!product.active) {
+          throw new BadRequestError(
+            `المنتج "${product.name}" غير متوفر حالياً (Product "${product.name}" is currently unavailable)`,
+          );
+        }
 
         let flavorAdditional = 0;
         if (item.flavorIds?.length) {

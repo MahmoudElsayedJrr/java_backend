@@ -35,7 +35,7 @@ class ProductRepository extends BaseRepository {
   // Used during order creation — get price + flavors in one query
   findForOrder(id) {
     return this.model.findUnique({
-      where: { id, active: true },
+      where: { id },
       select: {
         id: true,
         name: true,

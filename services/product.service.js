@@ -7,6 +7,7 @@ const { uploadProductImage, deleteProductImage } = require('../utils/storage');
 const { NotFoundError, ConflictError, BadRequestError } = require('../utils/errors');
 const { AUDIT_ACTIONS }   = require('../constants');
 const { parsePagination } = require('../utils/helpers');
+const { getIO }           = require('../sockets');
 
 class ProductService {
   async getAll(query) {
@@ -67,6 +68,7 @@ class ProductService {
       metadata: { name: product.name, categoryId: product.categoryId },
     });
 
+    getIO()?.emit('catalog_updated');
     return productRepo.findByIdFull(product.id);
   }
 
@@ -110,6 +112,7 @@ class ProductService {
       metadata: { fields: Object.keys(data) },
     });
 
+    getIO()?.emit('catalog_updated');
     return productRepo.findByIdFull(id);
   }
 
@@ -127,6 +130,8 @@ class ProductService {
       entityId: id,
       metadata: { name: existing.name },
     });
+
+    getIO()?.emit('catalog_updated');
   }
 }
 

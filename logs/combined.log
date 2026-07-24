@@ -4490,3 +4490,300 @@
 {"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 4ms","timestamp":"2026-07-24 03:12:25","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
 {"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products?active=true 200 — 8ms","timestamp":"2026-07-24 03:12:25","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
 {"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 18ms","timestamp":"2026-07-24 03:12:26","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-24 03:18:42"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-24 03:18:42"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-24 03:18:42"}
+{"level":"info","message":"[Socket] Connected: 6hbINUWH4S5RQdBkAAAB | User: fabc5344-7ac4-45dd-81fe-8a62732c533c","timestamp":"2026-07-24 03:18:43"}
+{"level":"info","message":"[Socket] Connected: RBLg9OdWH7jK-qJrAAAD | User: fa0194d2-f838-485e-8798-61fcba7d1ab6","timestamp":"2026-07-24 03:18:44"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","timestamp":"2026-07-24 03:19:13"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-24 03:19:29"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-24 03:19:29"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-24 03:19:29"}
+{"level":"info","message":"[Socket] Connected: DzZZMm6PupIET7EtAAAB | User: fa0194d2-f838-485e-8798-61fcba7d1ab6","timestamp":"2026-07-24 03:19:31"}
+{"level":"info","message":"[Socket] Connected: _pP5bkwy0eOsvFZbAAAD | User: fabc5344-7ac4-45dd-81fe-8a62732c533c","timestamp":"2026-07-24 03:19:34"}
+{"level":"info","message":"[Socket] Disconnected: DzZZMm6PupIET7EtAAAB","timestamp":"2026-07-24 03:19:38"}
+{"level":"info","message":"[Socket] Disconnected: _pP5bkwy0eOsvFZbAAAD","timestamp":"2026-07-24 03:19:39"}
+{"level":"info","message":"[Socket] Connected: nKhFXwI5mrt0V_r1AAAG | User: fa0194d2-f838-485e-8798-61fcba7d1ab6","timestamp":"2026-07-24 03:19:43"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 270ms","timestamp":"2026-07-24 03:19:44","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 208ms","timestamp":"2026-07-24 03:19:44","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/auth/me 200 — 202ms","timestamp":"2026-07-24 03:19:44","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"level":"info","message":"[Socket] Disconnected: nKhFXwI5mrt0V_r1AAAG","timestamp":"2026-07-24 03:19:44"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 55ms","timestamp":"2026-07-24 03:19:44","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 35ms","timestamp":"2026-07-24 03:19:44","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"level":"info","message":"[Socket] Connected: kkDifVOWpz4uERMuAAAI | User: fa0194d2-f838-485e-8798-61fcba7d1ab6","timestamp":"2026-07-24 03:19:44"}
+{"level":"info","message":"[Socket] Connected: FH8Eym8eMidBBg6_AAAL | User: fabc5344-7ac4-45dd-81fe-8a62732c533c","timestamp":"2026-07-24 03:19:45"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 7ms","timestamp":"2026-07-24 03:19:45","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 34ms","timestamp":"2026-07-24 03:19:46","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/auth/me 200 — 188ms","timestamp":"2026-07-24 03:19:46","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"level":"info","message":"[Socket] Disconnected: FH8Eym8eMidBBg6_AAAL","timestamp":"2026-07-24 03:19:46"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 10ms","timestamp":"2026-07-24 03:19:46","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-24 03:19:46","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"level":"info","message":"[Socket] Connected: YreQk8dal54alcRBAAAN | User: fabc5344-7ac4-45dd-81fe-8a62732c533c","timestamp":"2026-07-24 03:19:46"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 216ms","timestamp":"2026-07-24 03:19:46","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 329ms","timestamp":"2026-07-24 03:19:47","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 30ms","timestamp":"2026-07-24 03:19:47","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 151ms","timestamp":"2026-07-24 03:19:47","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 6ms","timestamp":"2026-07-24 03:19:48","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 17ms","timestamp":"2026-07-24 03:19:49","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 6ms","timestamp":"2026-07-24 03:19:53","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 17ms","timestamp":"2026-07-24 03:19:54","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products?page=1&limit=100 200 — 14ms","timestamp":"2026-07-24 03:19:57","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors?page=1&limit=100 200 — 14ms","timestamp":"2026-07-24 03:19:58","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories?page=1&limit=100 200 — 8ms","timestamp":"2026-07-24 03:19:59","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/users?page=1&limit=100 200 — 8ms","timestamp":"2026-07-24 03:19:59","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/stock 200 — 14ms","timestamp":"2026-07-24 03:19:59","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/products/528dda37-1a2f-4dc4-8721-99d23867a0b8 200 — 433ms","timestamp":"2026-07-24 03:20:03","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 4ms","timestamp":"2026-07-24 03:20:03","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 8ms","timestamp":"2026-07-24 03:20:03","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 7ms","timestamp":"2026-07-24 03:20:03","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"body":{"deliveryAddress":"312321321 | Tel: 01025941259","discount":0,"items":[{"flavorIds":[],"notes":null,"productId":"528dda37-1a2f-4dc4-8721-99d23867a0b8","quantity":1}],"notes":null,"orderType":"DELIVERY","paymentMethod":"CASH"},"level":"error","message":"[POST] /api/orders — Product 528dda37-1a2f-4dc4-8721-99d23867a0b8 not found or inactive","stack":"Error: Product 528dda37-1a2f-4dc4-8721-99d23867a0b8 not found or inactive\n    at D:\\Training\\Java\\java_backend\\services\\order.service.js:147:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Promise.all (index 0)\n    at async OrderService.create (D:\\Training\\Java\\java_backend\\services\\order.service.js:143:27)\n    at async create (D:\\Training\\Java\\java_backend\\controllers\\index.js:251:21)","timestamp":"2026-07-24 03:20:35","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"POST /api/orders 404 — 262ms","timestamp":"2026-07-24 03:20:35","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"body":{"deliveryAddress":"312321321 | Tel: 01025941259","discount":0,"items":[{"flavorIds":[],"notes":null,"productId":"528dda37-1a2f-4dc4-8721-99d23867a0b8","quantity":1}],"notes":null,"orderType":"DELIVERY","paymentMethod":"CASH"},"level":"error","message":"[POST] /api/orders — Product 528dda37-1a2f-4dc4-8721-99d23867a0b8 not found or inactive","stack":"Error: Product 528dda37-1a2f-4dc4-8721-99d23867a0b8 not found or inactive\n    at D:\\Training\\Java\\java_backend\\services\\order.service.js:147:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Promise.all (index 0)\n    at async OrderService.create (D:\\Training\\Java\\java_backend\\services\\order.service.js:143:27)\n    at async create (D:\\Training\\Java\\java_backend\\controllers\\index.js:251:21)","timestamp":"2026-07-24 03:20:52","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"POST /api/orders 404 — 59ms","timestamp":"2026-07-24 03:20:52","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"body":{"deliveryAddress":"312321321 | Tel: 01025941259","discount":0,"items":[{"flavorIds":[],"notes":null,"productId":"528dda37-1a2f-4dc4-8721-99d23867a0b8","quantity":1}],"notes":null,"orderType":"DELIVERY","paymentMethod":"CASH"},"level":"error","message":"[POST] /api/orders — Product 528dda37-1a2f-4dc4-8721-99d23867a0b8 not found or inactive","stack":"Error: Product 528dda37-1a2f-4dc4-8721-99d23867a0b8 not found or inactive\n    at D:\\Training\\Java\\java_backend\\services\\order.service.js:147:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Promise.all (index 0)\n    at async OrderService.create (D:\\Training\\Java\\java_backend\\services\\order.service.js:143:27)\n    at async create (D:\\Training\\Java\\java_backend\\controllers\\index.js:251:21)","timestamp":"2026-07-24 03:20:58","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"POST /api/orders 404 — 11ms","timestamp":"2026-07-24 03:20:58","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"level":"info","message":"[Socket] Connected: Kov1D-bTgzoOEbALAAAP | User: fa0194d2-f838-485e-8798-61fcba7d1ab6","timestamp":"2026-07-24 03:21:25"}
+{"level":"info","message":"[Socket] Disconnected: kkDifVOWpz4uERMuAAAI","timestamp":"2026-07-24 03:21:29"}
+{"level":"info","message":"[Socket] Disconnected: Kov1D-bTgzoOEbALAAAP","timestamp":"2026-07-24 03:21:59"}
+{"level":"info","message":"[Socket] Connected: u7I0MTzKnEAlwwYbAAAR | User: fa0194d2-f838-485e-8798-61fcba7d1ab6","timestamp":"2026-07-24 03:22:01"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-24 03:22:16"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-24 03:22:16"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-24 03:22:16"}
+{"level":"info","message":"[Socket] Connected: 5RjxU7Ex59jS1H7YAAAC | User: fa0194d2-f838-485e-8798-61fcba7d1ab6","timestamp":"2026-07-24 03:22:17"}
+{"level":"error","message":"[Socket Auth Error] Access token expired","timestamp":"2026-07-24 03:22:17"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-24 03:22:24"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-24 03:22:24"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-24 03:22:24"}
+{"level":"info","message":"[Socket] Connected: NZrlb_p7aZDodgFqAAAB | User: fa0194d2-f838-485e-8798-61fcba7d1ab6","timestamp":"2026-07-24 03:22:25"}
+{"level":"error","message":"[GET] /api/products — Access token expired","stack":"Error: Access token expired\n    at verifyAccessToken (D:\\Training\\Java\\java_backend\\utils\\jwt.js:31:13)\n    at authenticate (D:\\Training\\Java\\java_backend\\middlewares\\auth.js:13:21)\n    at Layer.handleRequest (D:\\Training\\Java\\java_backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:342:13)\n    at D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:297:9\n    at processParams (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:582:12)\n    at next (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:291:5)\n    at router.handle (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:186:3)\n    at router (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:60:12)\n    at Layer.handleRequest (D:\\Training\\Java\\java_backend\\node_modules\\router\\lib\\layer.js:152:17)","timestamp":"2026-07-24 03:22:25","userId":"unauthenticated"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"GET /api/products 401 — 14ms","timestamp":"2026-07-24 03:22:25","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/refresh 200 — 342ms","timestamp":"2026-07-24 03:22:27","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 35ms","timestamp":"2026-07-24 03:22:27","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 24ms","timestamp":"2026-07-24 03:22:27","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products?page=1&limit=100 200 — 14ms","timestamp":"2026-07-24 03:22:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors?page=1&limit=100 200 — 7ms","timestamp":"2026-07-24 03:22:29","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories?page=1&limit=100 200 — 8ms","timestamp":"2026-07-24 03:22:29","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/users?page=1&limit=100 200 — 52ms","timestamp":"2026-07-24 03:22:29","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/stock 200 — 10ms","timestamp":"2026-07-24 03:22:29","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/products/4f156cbf-7a4e-418e-a732-5e9d4d060bfd 200 — 223ms","timestamp":"2026-07-24 03:22:35","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 4ms","timestamp":"2026-07-24 03:22:36","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 18ms","timestamp":"2026-07-24 03:22:36","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-24 03:22:36","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-24 03:23:17"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-24 03:23:17"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-24 03:23:17"}
+{"level":"info","message":"[Socket] Connected: 2Li7EuktOO6zscr1AAAB | User: fa0194d2-f838-485e-8798-61fcba7d1ab6","timestamp":"2026-07-24 03:23:17"}
+{"level":"info","message":"[Socket] Disconnected: 2Li7EuktOO6zscr1AAAB","timestamp":"2026-07-24 03:24:19"}
+{"level":"info","message":"[Socket] Connected: 2wqxSZXBvDvLVBHmAAAE | User: fa0194d2-f838-485e-8798-61fcba7d1ab6","timestamp":"2026-07-24 03:24:25"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 161ms","timestamp":"2026-07-24 03:24:26","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 236ms","timestamp":"2026-07-24 03:24:26","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/auth/me 200 — 182ms","timestamp":"2026-07-24 03:24:26","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"level":"info","message":"[Socket] Disconnected: 2wqxSZXBvDvLVBHmAAAE","timestamp":"2026-07-24 03:24:26"}
+{"level":"info","message":"[Socket] Connected: 1Rr9Fw9K3vKZRjyzAAAH | User: fabc5344-7ac4-45dd-81fe-8a62732c533c","timestamp":"2026-07-24 03:24:26"}
+{"level":"info","message":"[Socket] Connected: 82UZbBz0yBNk-KVzAAAJ | User: fa0194d2-f838-485e-8798-61fcba7d1ab6","timestamp":"2026-07-24 03:24:26"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 51ms","timestamp":"2026-07-24 03:24:26","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 112ms","timestamp":"2026-07-24 03:24:26","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 3ms","timestamp":"2026-07-24 03:24:27","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 15ms","timestamp":"2026-07-24 03:24:27","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/auth/me 200 — 77ms","timestamp":"2026-07-24 03:24:27","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"level":"info","message":"[Socket] Disconnected: 1Rr9Fw9K3vKZRjyzAAAH","timestamp":"2026-07-24 03:24:28"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 7ms","timestamp":"2026-07-24 03:24:28","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 7ms","timestamp":"2026-07-24 03:24:28","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 79ms","timestamp":"2026-07-24 03:24:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 116ms","timestamp":"2026-07-24 03:24:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"level":"info","message":"[Socket] Connected: AamnK3KICAlKhpuFAAAL | User: fabc5344-7ac4-45dd-81fe-8a62732c533c","timestamp":"2026-07-24 03:24:28"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 12ms","timestamp":"2026-07-24 03:24:29","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 22ms","timestamp":"2026-07-24 03:24:29","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 31ms","timestamp":"2026-07-24 03:24:29","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 18ms","timestamp":"2026-07-24 03:24:30","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products?page=1&limit=100 200 — 21ms","timestamp":"2026-07-24 03:24:35","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors?page=1&limit=100 200 — 16ms","timestamp":"2026-07-24 03:24:36","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories?page=1&limit=100 200 — 7ms","timestamp":"2026-07-24 03:24:36","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/users?page=1&limit=100 200 — 5ms","timestamp":"2026-07-24 03:24:36","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/stock 200 — 7ms","timestamp":"2026-07-24 03:24:36","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/products/4f156cbf-7a4e-418e-a732-5e9d4d060bfd 200 — 217ms","timestamp":"2026-07-24 03:24:39","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 3ms","timestamp":"2026-07-24 03:24:39","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 3ms","timestamp":"2026-07-24 03:24:39","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 18ms","timestamp":"2026-07-24 03:24:39","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 35ms","timestamp":"2026-07-24 03:24:40","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 33ms","timestamp":"2026-07-24 03:24:40","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 75ms","timestamp":"2026-07-24 03:24:40","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 167ms","timestamp":"2026-07-24 03:24:40","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 290ms","timestamp":"2026-07-24 03:24:40","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 62ms","timestamp":"2026-07-24 03:24:40","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 43ms","timestamp":"2026-07-24 03:24:40","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 95ms","timestamp":"2026-07-24 03:24:40","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 82ms","timestamp":"2026-07-24 03:24:40","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 10ms","timestamp":"2026-07-24 03:24:40","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 13ms","timestamp":"2026-07-24 03:24:40","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 35ms","timestamp":"2026-07-24 03:24:40","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-24 03:24:40","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 65ms","timestamp":"2026-07-24 03:24:41","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 95ms","timestamp":"2026-07-24 03:24:41","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-24 03:24:41","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-24 03:24:41","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-24 03:24:41","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/products/d236048f-06b6-4f4a-8360-d199bc6e7240 200 — 99ms","timestamp":"2026-07-24 03:24:51","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 30ms","timestamp":"2026-07-24 03:24:52","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 3ms","timestamp":"2026-07-24 03:24:52","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 19ms","timestamp":"2026-07-24 03:24:52","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 46ms","timestamp":"2026-07-24 03:24:52","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 16ms","timestamp":"2026-07-24 03:24:52","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 3ms","timestamp":"2026-07-24 03:24:52","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 4ms","timestamp":"2026-07-24 03:24:52","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 5ms","timestamp":"2026-07-24 03:24:52","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-24 03:24:52","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 11ms","timestamp":"2026-07-24 03:24:52","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 6ms","timestamp":"2026-07-24 03:24:52","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 8ms","timestamp":"2026-07-24 03:24:52","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 8ms","timestamp":"2026-07-24 03:24:52","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 49ms","timestamp":"2026-07-24 03:24:53","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 72ms","timestamp":"2026-07-24 03:24:53","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 5ms","timestamp":"2026-07-24 03:24:53","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 27ms","timestamp":"2026-07-24 03:24:53","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 32ms","timestamp":"2026-07-24 03:24:53","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 7ms","timestamp":"2026-07-24 03:24:53","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 6ms","timestamp":"2026-07-24 03:24:53","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-24 03:24:53","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/products/528dda37-1a2f-4dc4-8721-99d23867a0b8 200 — 138ms","timestamp":"2026-07-24 03:25:21","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 5ms","timestamp":"2026-07-24 03:25:21","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 4ms","timestamp":"2026-07-24 03:25:21","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 6ms","timestamp":"2026-07-24 03:25:21","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 39ms","timestamp":"2026-07-24 03:25:21","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 91ms","timestamp":"2026-07-24 03:25:22","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 30ms","timestamp":"2026-07-24 03:25:22","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 66ms","timestamp":"2026-07-24 03:25:22","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 8ms","timestamp":"2026-07-24 03:25:22","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 10ms","timestamp":"2026-07-24 03:25:22","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 31ms","timestamp":"2026-07-24 03:25:22","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 51ms","timestamp":"2026-07-24 03:25:22","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 169ms","timestamp":"2026-07-24 03:25:22","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 31ms","timestamp":"2026-07-24 03:25:22","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 6ms","timestamp":"2026-07-24 03:25:22","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 6ms","timestamp":"2026-07-24 03:25:22","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 7ms","timestamp":"2026-07-24 03:25:23","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 7ms","timestamp":"2026-07-24 03:25:23","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 7ms","timestamp":"2026-07-24 03:25:23","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-24 03:25:23","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-24 03:25:23","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 3ms","timestamp":"2026-07-24 03:25:24","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/products/528dda37-1a2f-4dc4-8721-99d23867a0b8 200 — 118ms","timestamp":"2026-07-24 03:25:25","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 4ms","timestamp":"2026-07-24 03:25:26","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 4ms","timestamp":"2026-07-24 03:25:26","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 3ms","timestamp":"2026-07-24 03:25:26","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 5ms","timestamp":"2026-07-24 03:25:26","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 11ms","timestamp":"2026-07-24 03:25:26","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 4ms","timestamp":"2026-07-24 03:25:26","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 2ms","timestamp":"2026-07-24 03:25:26","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 8ms","timestamp":"2026-07-24 03:25:26","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 144ms","timestamp":"2026-07-24 03:25:27","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 160ms","timestamp":"2026-07-24 03:25:27","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 115ms","timestamp":"2026-07-24 03:25:27","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 259ms","timestamp":"2026-07-24 03:25:27","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/products/d236048f-06b6-4f4a-8360-d199bc6e7240 200 — 313ms","timestamp":"2026-07-24 03:25:27","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 12ms","timestamp":"2026-07-24 03:25:27","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 15ms","timestamp":"2026-07-24 03:25:27","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 6ms","timestamp":"2026-07-24 03:25:27","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 6ms","timestamp":"2026-07-24 03:25:27","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 5ms","timestamp":"2026-07-24 03:25:27","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 3ms","timestamp":"2026-07-24 03:25:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 17ms","timestamp":"2026-07-24 03:25:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 39ms","timestamp":"2026-07-24 03:25:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 42ms","timestamp":"2026-07-24 03:25:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 27ms","timestamp":"2026-07-24 03:25:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 5ms","timestamp":"2026-07-24 03:25:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 15ms","timestamp":"2026-07-24 03:25:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 31ms","timestamp":"2026-07-24 03:25:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 10ms","timestamp":"2026-07-24 03:25:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 22ms","timestamp":"2026-07-24 03:25:28","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 106ms","timestamp":"2026-07-24 03:25:29","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 137ms","timestamp":"2026-07-24 03:25:29","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 63ms","timestamp":"2026-07-24 03:25:29","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 24ms","timestamp":"2026-07-24 03:25:29","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 9ms","timestamp":"2026-07-24 03:25:29","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 7ms","timestamp":"2026-07-24 03:25:29","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 9ms","timestamp":"2026-07-24 03:25:29","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 7ms","timestamp":"2026-07-24 03:25:29","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 10ms","timestamp":"2026-07-24 03:25:29","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 12ms","timestamp":"2026-07-24 03:25:29","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-24 03:25:29","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 5ms","timestamp":"2026-07-24 03:25:29","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 3ms","timestamp":"2026-07-24 03:25:30","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 5ms","timestamp":"2026-07-24 03:25:30","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 3ms","timestamp":"2026-07-24 03:25:30","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/orders 201 — 500ms","timestamp":"2026-07-24 03:26:08","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 18ms","timestamp":"2026-07-24 03:26:09","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 9ms","timestamp":"2026-07-24 03:26:09","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 6ms","timestamp":"2026-07-24 03:26:16","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 22ms","timestamp":"2026-07-24 03:26:17","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 10ms","timestamp":"2026-07-24 03:26:21","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 18ms","timestamp":"2026-07-24 03:26:21","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/orders/7928b131-7563-4e25-b87a-cd7459490639/status 200 — 122ms","timestamp":"2026-07-24 03:26:31","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 73ms","timestamp":"2026-07-24 03:26:31","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 122ms","timestamp":"2026-07-24 03:26:31","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/7928b131-7563-4e25-b87a-cd7459490639 200 — 12ms","timestamp":"2026-07-24 03:26:32","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/orders/7928b131-7563-4e25-b87a-cd7459490639/status 200 — 13ms","timestamp":"2026-07-24 03:26:33","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 13ms","timestamp":"2026-07-24 03:26:34","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 102ms","timestamp":"2026-07-24 03:26:34","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/7928b131-7563-4e25-b87a-cd7459490639 200 — 9ms","timestamp":"2026-07-24 03:26:35","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/orders/7928b131-7563-4e25-b87a-cd7459490639/status 200 — 10ms","timestamp":"2026-07-24 03:26:38","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 81ms","timestamp":"2026-07-24 03:26:38","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 200ms","timestamp":"2026-07-24 03:26:38","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/7928b131-7563-4e25-b87a-cd7459490639 200 — 4ms","timestamp":"2026-07-24 03:26:39","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"level":"error","message":"[GET] /api/products — Access token expired","stack":"Error: Access token expired\n    at verifyAccessToken (D:\\Training\\Java\\java_backend\\utils\\jwt.js:31:13)\n    at authenticate (D:\\Training\\Java\\java_backend\\middlewares\\auth.js:13:21)\n    at Layer.handleRequest (D:\\Training\\Java\\java_backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:342:13)\n    at D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:297:9\n    at processParams (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:582:12)\n    at next (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:291:5)\n    at router.handle (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:186:3)\n    at router (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:60:12)\n    at Layer.handleRequest (D:\\Training\\Java\\java_backend\\node_modules\\router\\lib\\layer.js:152:17)","timestamp":"2026-07-24 03:28:14","userId":"unauthenticated"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"GET /api/products 401 — 3ms","timestamp":"2026-07-24 03:28:14","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/refresh 200 — 77ms","timestamp":"2026-07-24 03:28:15","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 20ms","timestamp":"2026-07-24 03:28:16","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 16ms","timestamp":"2026-07-24 03:28:16","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-24 03:29:15"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-24 03:29:15"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-24 03:29:15"}
+{"level":"info","message":"[Socket] Connected: NUFtRXM58hhM1qRXAAAC | User: fabc5344-7ac4-45dd-81fe-8a62732c533c","timestamp":"2026-07-24 03:29:16"}
+{"level":"error","message":"[Socket Auth Error] Access token expired","timestamp":"2026-07-24 03:29:16"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","timestamp":"2026-07-24 03:29:46"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-24 03:29:50"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-24 03:29:51"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-24 03:29:51"}
+{"level":"info","message":"[Socket] Connected: VpPTHHOg4-6vfOw1AAAB | User: fabc5344-7ac4-45dd-81fe-8a62732c533c","timestamp":"2026-07-24 03:29:51"}
+{"level":"info","message":"[Socket] Disconnected: VpPTHHOg4-6vfOw1AAAB","timestamp":"2026-07-24 03:29:57"}
+{"level":"info","message":"[Socket] Connected: MOmPQxdzOuV1jkX1AAAE | User: fabc5344-7ac4-45dd-81fe-8a62732c533c","timestamp":"2026-07-24 03:30:03"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 729ms","timestamp":"2026-07-24 03:30:05","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/auth/me 200 — 746ms","timestamp":"2026-07-24 03:30:05","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 973ms","timestamp":"2026-07-24 03:30:05","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"level":"info","message":"[Socket] Disconnected: MOmPQxdzOuV1jkX1AAAE","timestamp":"2026-07-24 03:30:05"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 39ms","timestamp":"2026-07-24 03:30:05","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"level":"info","message":"[Socket] Connected: RQaRptSpqsl0f3evAAAG | User: fabc5344-7ac4-45dd-81fe-8a62732c533c","timestamp":"2026-07-24 03:30:06"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 13ms","timestamp":"2026-07-24 03:30:06","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 9ms","timestamp":"2026-07-24 03:30:06","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 12ms","timestamp":"2026-07-24 03:30:06","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 86ms","timestamp":"2026-07-24 03:30:09","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 90ms","timestamp":"2026-07-24 03:30:09","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 50ms","timestamp":"2026-07-24 03:30:23","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 20ms","timestamp":"2026-07-24 03:30:23","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/orders 201 — 304ms","timestamp":"2026-07-24 03:30:48","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 80ms","timestamp":"2026-07-24 03:30:49","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 25ms","timestamp":"2026-07-24 03:30:49","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 25ms","timestamp":"2026-07-24 03:30:58","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 68ms","timestamp":"2026-07-24 03:30:59","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 8ms","timestamp":"2026-07-24 03:31:03","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 32ms","timestamp":"2026-07-24 03:31:04","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/orders/96344ea0-c9dd-4417-be02-2ac292f53a83/status 200 — 122ms","timestamp":"2026-07-24 03:31:22","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 18ms","timestamp":"2026-07-24 03:31:22","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 20ms","timestamp":"2026-07-24 03:31:23","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/96344ea0-c9dd-4417-be02-2ac292f53a83 200 — 5ms","timestamp":"2026-07-24 03:31:24","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 6ms","timestamp":"2026-07-24 03:31:26","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 12ms","timestamp":"2026-07-24 03:31:27","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/orders/96344ea0-c9dd-4417-be02-2ac292f53a83/status 200 — 34ms","timestamp":"2026-07-24 03:31:30","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 9ms","timestamp":"2026-07-24 03:31:30","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 19ms","timestamp":"2026-07-24 03:31:30","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/96344ea0-c9dd-4417-be02-2ac292f53a83 200 — 35ms","timestamp":"2026-07-24 03:31:32","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 17ms","timestamp":"2026-07-24 03:31:32","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 11ms","timestamp":"2026-07-24 03:31:33","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"PATCH /api/orders/96344ea0-c9dd-4417-be02-2ac292f53a83/status 200 — 36ms","timestamp":"2026-07-24 03:31:36","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 11ms","timestamp":"2026-07-24 03:31:36","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 21ms","timestamp":"2026-07-24 03:31:36","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/96344ea0-c9dd-4417-be02-2ac292f53a83 200 — 6ms","timestamp":"2026-07-24 03:31:38","userId":"fabc5344-7ac4-45dd-81fe-8a62732c533c"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 9ms","timestamp":"2026-07-24 03:31:40","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 8ms","timestamp":"2026-07-24 03:31:41","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 140ms","timestamp":"2026-07-24 03:31:57","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 14ms","timestamp":"2026-07-24 03:31:57","userId":"fa0194d2-f838-485e-8798-61fcba7d1ab6"}
