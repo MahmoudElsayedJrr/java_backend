@@ -279,6 +279,7 @@ class OrderController {
         req.params.id,
         req.body.status,
         req.user.id,
+        req.user.role,
       );
       sendSuccess(res, { data: order, message: "Order status updated" });
     } catch (err) {

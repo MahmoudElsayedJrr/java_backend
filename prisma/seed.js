@@ -13,11 +13,11 @@ async function main() {
   // ── 1. Admin ──────────────────────────────────────────────
   const adminPassword = await bcrypt.hash('Admin@123456', 12);
   const admin = await prisma.user.upsert({
-    where:  { email: 'admin@javacafe.com' },
+    where:  { email: 'adminn@javacafe.com' },
     update: { password: adminPassword },
     create: {
       name:     'Super Admin',
-      email:    'admin@javacafe.com',
+      email:    'adminn@javacafe.com',
       password: adminPassword,
       role:     'ADMIN',
       active:   true,

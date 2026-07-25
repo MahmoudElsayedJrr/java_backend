@@ -284,9 +284,21 @@ class OrderService {
   }
 
   // ── Update order status ───────────────────────────────────
-  async updateStatus(id, newStatus, actorId) {
+  async updateStatus(id, newStatus, actorId, actorRole) {
     const order = await orderRepo.findByIdFull(id);
     if (!order) throw new NotFoundError("Order not found");
+
+    if (actorRole === "CUSTOMER") {
+      if (order.cashierId !== actorId) {
+        throw new ForbiddenError("You can only cancel your own orders");
+      }
+      if (newStatus !== ORDER_STATUS.CANCELLED) {
+        throw new BadRequestError("Customers can only cancel their orders");
+      }
+      if (order.status !== ORDER_STATUS.PENDING) {
+        throw new BadRequestError("Orders can only be cancelled while pending");
+      }
+    }
 
     const allowed = ORDER_STATUS_TRANSITIONS[order.status];
     if (!allowed.includes(newStatus)) {

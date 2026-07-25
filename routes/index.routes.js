@@ -95,10 +95,10 @@ orderRouter.patch(
   oc.confirmPayment,
 );
 
-// Admin + Cashier — update status
+// Admin + Cashier + Customer — update status
 orderRouter.patch(
   "/:id/status",
-  authorize("ADMIN", "CASHIER"),
+  authorize("ADMIN", "CASHIER", "CUSTOMER"),
   validate(ov.updateStatus),
   oc.updateStatus,
 );
