@@ -13,6 +13,7 @@ router.use(authenticate);
 router.get('/',                          validateQuery(v.listQuery), ctrl.getAll);
 router.get('/category/:categoryId',      ctrl.getByCategory);
 router.get('/:id',                       ctrl.getById);
+router.post('/:id/favorite',              ctrl.toggleFavorite);
 
 // Admin only
 router.post('/',     authorize('ADMIN'), upload.single('image'), validate(v.create), ctrl.create);

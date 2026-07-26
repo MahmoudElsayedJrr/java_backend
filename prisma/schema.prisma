@@ -53,6 +53,7 @@ model User {
   updatedAt     DateTime @updatedAt
   orders    Order[]
   auditLogs AuditLog[]
+  favoriteProducts FavoriteProduct[]
   @@index([email])
   @@index([role])
   @@map("users")
@@ -99,6 +100,7 @@ model Product {
   category       Category        @relation(fields: [categoryId], references: [id], onDelete: Restrict)
   productFlavors ProductFlavor[]
   orderItems     OrderItem[]
+  favoriteProducts FavoriteProduct[]
   
   @@index([categoryId])
   @@index([active])
@@ -224,4 +226,19 @@ model RefreshToken {
   @@index([token])
   @@index([userId])
   @@map("refresh_tokens")
+}
+
+model FavoriteProduct {
+  id        String   @id @default(uuid())
+  userId    String
+  productId String
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, productId])
+  @@index([userId])
+  @@index([productId])
+  @@map("favorite_products")
 }

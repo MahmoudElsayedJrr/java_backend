@@ -143,9 +143,9 @@ class AuthService {
   async forgotPassword(email) {
     const user = await userRepo.findByEmail(email);
 
-    // لو مش موجود مش بنقول للمستخدم — أمان
-    if (!user)
-      return { message: "If this email exists, a reset code has been sent" };
+    if (!user) {
+      throw new NotFoundError("Email address not found");
+    }
 
     await _sendCode(email, user.name, "PASSWORD_RESET");
     return { message: "If this email exists, a reset code has been sent" };

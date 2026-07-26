@@ -10,26 +10,59 @@ const { parsePagination } = require('../utils/helpers');
 const { getIO }           = require('../sockets');
 
 class ProductService {
-  async getAll(query) {
+  async getAll(query, userId) {
     const { page, limit, skip } = parsePagination(query);
     const where = {};
     if (query.active !== undefined)    where.active     = query.active === 'true';
     if (query.categoryId)              where.categoryId = query.categoryId;
 
     const { data, total } = await productRepo.findAllPaginated({ skip, take: limit, where });
+
+    if (userId) {
+      const userFavs = await prisma.favoriteProduct.findMany({
+        where: { userId },
+        select: { productId: true },
+      });
+      const favSet = new Set(userFavs.map((f) => f.productId));
+      data.forEach((p) => {
+        p.isLiked = favSet.has(p.id);
+      });
+    }
+
     return { data, total, page, limit };
   }
 
-  async getById(id) {
+  async getById(id, userId) {
     const product = await productRepo.findByIdFull(id);
     if (!product) throw new NotFoundError('Product not found');
+
+    if (userId) {
+      const fav = await prisma.favoriteProduct.findFirst({
+        where: { userId, productId: id },
+      });
+      product.isLiked = !!fav;
+    }
+
     return product;
   }
 
-  async getByCategory(categoryId) {
+  async getByCategory(categoryId, userId) {
     const category = await categoryRepo.findById(categoryId);
     if (!category) throw new NotFoundError('Category not found');
-    return productRepo.findActiveByCategory(categoryId);
+    const data = await productRepo.findActiveByCategory(categoryId);
+
+    if (userId) {
+      const userFavs = await prisma.favoriteProduct.findMany({
+        where: { userId },
+        select: { productId: true },
+      });
+      const favSet = new Set(userFavs.map((f) => f.productId));
+      data.forEach((p) => {
+        p.isLiked = favSet.has(p.id);
+      });
+    }
+
+    return data;
   }
 
   async create(data, file, actorId) {
@@ -132,6 +165,29 @@ class ProductService {
     });
 
     getIO()?.emit('catalog_updated');
+  }
+
+  async toggleFavorite(productId, userId) {
+    const product = await productRepo.findById(productId);
+    if (!product) throw new NotFoundError('Product not found');
+
+    const existing = await prisma.favoriteProduct.findUnique({
+      where: {
+        userId_productId: { userId, productId },
+      },
+    });
+
+    if (existing) {
+      await prisma.favoriteProduct.delete({
+        where: { id: existing.id },
+      });
+      return { isLiked: false };
+    } else {
+      await prisma.favoriteProduct.create({
+        data: { userId, productId },
+      });
+      return { isLiked: true };
+    }
   }
 }
 
