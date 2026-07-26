@@ -109,12 +109,15 @@ class AuthService {
   async login(email, password) {
     const user = await userRepo.findByEmail(email);
     if (!user) throw new UnauthorizedError("Invalid email or password");
-    if (!user.active) throw new UnauthorizedError("Account is deactivated");
-
-    // Check email verified for customers
     if (user.role === "CUSTOMER" && !user.emailVerified) {
+      try {
+        await _sendCode(email, user.name, "EMAIL_VERIFICATION");
+      } catch (err) {
+        // Silent fail to ensure error response goes through
+      }
       throw new UnauthorizedError("Please verify your email first");
     }
+    if (!user.active) throw new UnauthorizedError("Account is deactivated");
 
     const valid = await bcrypt.compare(password, user.password);
     if (!valid) throw new UnauthorizedError("Invalid email or password");
