@@ -8,9 +8,31 @@ class AuthController {
       const result = await authService.register(req.body);
       sendSuccess(res, {
         data: result,
-        message: "Account created successfully",
+        message: result.message,
         statusCode: HTTP_STATUS.CREATED,
       });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async verifyEmail(req, res, next) {
+    try {
+      const { email, code } = req.body;
+      const result = await authService.verifyEmail(email, code);
+      sendSuccess(res, {
+        data: result,
+        message: "Email verified successfully",
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async resendVerification(req, res, next) {
+    try {
+      const result = await authService.resendVerification(req.body.email);
+      sendSuccess(res, { data: result, message: result.message });
     } catch (err) {
       next(err);
     }
@@ -21,6 +43,39 @@ class AuthController {
       const { email, password } = req.body;
       const result = await authService.login(email, password);
       sendSuccess(res, { data: result, message: "Login successful" });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async forgotPassword(req, res, next) {
+    try {
+      const result = await authService.forgotPassword(req.body.email);
+      sendSuccess(res, { data: result, message: result.message });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async resetPassword(req, res, next) {
+    try {
+      const { email, code, newPassword } = req.body;
+      const result = await authService.resetPassword(email, code, newPassword);
+      sendSuccess(res, { data: result, message: result.message });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async changePassword(req, res, next) {
+    try {
+      const { oldPassword, newPassword } = req.body;
+      const result = await authService.changePassword(
+        req.user.id,
+        oldPassword,
+        newPassword,
+      );
+      sendSuccess(res, { data: result, message: result.message });
     } catch (err) {
       next(err);
     }

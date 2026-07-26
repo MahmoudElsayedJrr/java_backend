@@ -12,6 +12,11 @@ enum Role {
   CUSTOMER
 }
 
+enum CodeType {
+  EMAIL_VERIFICATION
+  PASSWORD_RESET
+}
+
 enum OrderStatus {
   PENDING
   PREPARING
@@ -37,20 +42,36 @@ enum PaymentStatus {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  name      String
-  email     String   @unique
-  password  String
-  role      Role     @default(CUSTOMER)
-  active    Boolean  @default(true)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id            String   @id @default(uuid())
+  name          String
+  email         String   @unique
+  password      String
+  role          Role     @default(CUSTOMER)
+  active        Boolean  @default(true)
+  emailVerified Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
   orders    Order[]
   auditLogs AuditLog[]
   @@index([email])
   @@index([role])
   @@map("users")
 }
+
+model VerificationCode {
+  id        String   @id @default(uuid())
+  email     String
+  code      String
+  type      CodeType
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([email])
+  @@index([code])
+  @@map("verification_codes")
+}
+
 
 model Category {
   id        String   @id @default(uuid())

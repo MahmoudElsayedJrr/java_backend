@@ -5531,3 +5531,285 @@
 {"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 39ms","timestamp":"2026-07-26 01:39:49","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
 {"level":"info","message":"[Socket] Connected: IZlmCv8cFaRzOKmrAAAR | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 01:39:49"}
 {"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 7ms","timestamp":"2026-07-26 01:39:49","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: IZlmCv8cFaRzOKmrAAAR","timestamp":"2026-07-26 01:41:48"}
+{"level":"info","message":"[Socket] Connected: acYmvAJ-x5HiOOk9AAAU | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 01:42:45"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/auth/me 200 — 1250ms","timestamp":"2026-07-26 01:42:47","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 685ms","timestamp":"2026-07-26 01:42:47","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: acYmvAJ-x5HiOOk9AAAU","timestamp":"2026-07-26 01:42:47"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 93ms","timestamp":"2026-07-26 01:42:47","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Connected: Y1emlknL8QTjzB00AAAW | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 01:42:47"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 9ms","timestamp":"2026-07-26 01:42:48","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: Y1emlknL8QTjzB00AAAW","timestamp":"2026-07-26 01:44:46"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 58ms","timestamp":"2026-07-26 01:44:50","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/auth/me 200 — 53ms","timestamp":"2026-07-26 01:44:50","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Connected: u26SJYjeQ9Nqo_VgAAAZ | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 01:44:50"}
+{"level":"info","message":"[Socket] Disconnected: u26SJYjeQ9Nqo_VgAAAZ","timestamp":"2026-07-26 01:44:50"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 281ms","timestamp":"2026-07-26 01:44:50","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Connected: YndTKAjpkLqr1B8_AAAb | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 01:44:50"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 178ms","timestamp":"2026-07-26 01:44:51","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/reports/daily 200 — 335ms","timestamp":"2026-07-26 01:46:13","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: YndTKAjpkLqr1B8_AAAb","timestamp":"2026-07-26 01:47:15"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/login 200 — 1414ms","timestamp":"2026-07-26 01:56:51","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 20ms","timestamp":"2026-07-26 01:56:51","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Connected: JvBkCPkKhP9w2TrmAAAe | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 01:56:52"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 30ms","timestamp":"2026-07-26 01:56:52","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 313ms","timestamp":"2026-07-26 01:56:52","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 118ms","timestamp":"2026-07-26 01:56:53","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 675ms","timestamp":"2026-07-26 01:56:53","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 40ms","timestamp":"2026-07-26 01:56:53","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/reports/daily 200 — 61ms","timestamp":"2026-07-26 01:56:55","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","timestamp":"2026-07-26 02:03:15"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:17:20"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:17:20"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:17:20"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:17:28"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:17:28"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:17:28"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:17:39"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:17:39"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:17:39"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:17:40"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:17:40"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:17:40"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:17:46"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:17:46"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:17:46"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:17:48"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:17:48"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:17:48"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:18:16"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:18:17"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:18:17"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:18:18"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:18:18"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:18:18"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:18:44"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:18:44"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:18:44"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:20:29"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:20:29"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:20:29"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:21:01"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:21:01"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:21:01"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:21:13"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:21:13"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:21:13"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:21:18"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:21:18"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:21:18"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:21:24"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:21:24"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:21:24"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:21:31"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:21:31"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:21:31"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:21:32"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:21:32"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:21:32"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:21:33"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:21:33"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:21:33"}
+{"body":{"email":"mr.houda2001@gmail.com","name":"Mahhmoud","password":"01025941259"},"level":"error","message":"[POST] /api/auth/register — Email already in use","stack":"Error: Email already in use\n    at AuthService.register (D:\\Training\\Java\\java_backend\\services\\auth.service.js:39:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async register (D:\\Training\\Java\\java_backend\\controllers\\auth.controller.js:8:22)","timestamp":"2026-07-26 02:22:18","userId":"unauthenticated"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"POST /api/auth/register 409 — 146ms","timestamp":"2026-07-26 02:22:18","userId":"-"}
+{"error":"Invalid login: 535 5.7.8 Authentication failed","level":"error","message":"[Email] Failed to send verification email","timestamp":"2026-07-26 02:22:26"}
+{"body":{"email":"mr.houda2002@gmail.com","name":"Mahhmoud","password":"01025941259"},"level":"error","message":"[POST] /api/auth/register — Failed to send verification email","stack":"Error: Failed to send verification email\n    at sendVerificationEmail (D:\\Training\\Java\\java_backend\\services\\email.service.js:42:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async _sendCode (D:\\Training\\Java\\java_backend\\services\\auth.service.js:250:5)\n    at async AuthService.register (D:\\Training\\Java\\java_backend\\services\\auth.service.js:54:5)\n    at async register (D:\\Training\\Java\\java_backend\\controllers\\auth.controller.js:8:22)","timestamp":"2026-07-26 02:22:26","userId":"unauthenticated"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"POST /api/auth/register 500 — 983ms","timestamp":"2026-07-26 02:22:26","userId":"-"}
+{"error":"Invalid login: 535 5.7.8 Authentication failed","level":"error","message":"[Email] Failed to send verification email","timestamp":"2026-07-26 02:23:44"}
+{"body":{"email":"mr.houda2003@gmail.com","name":"Mahhmoud","password":"01025941259"},"level":"error","message":"[POST] /api/auth/register — Failed to send verification email","stack":"Error: Failed to send verification email\n    at sendVerificationEmail (D:\\Training\\Java\\java_backend\\services\\email.service.js:42:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async _sendCode (D:\\Training\\Java\\java_backend\\services\\auth.service.js:250:5)\n    at async AuthService.register (D:\\Training\\Java\\java_backend\\services\\auth.service.js:54:5)\n    at async register (D:\\Training\\Java\\java_backend\\controllers\\auth.controller.js:8:22)","timestamp":"2026-07-26 02:23:44","userId":"unauthenticated"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"POST /api/auth/register 500 — 1161ms","timestamp":"2026-07-26 02:23:44","userId":"-"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:25:09"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:25:09"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:25:09"}
+{"body":{"email":"mr.houda2003@gmail.com","name":"Mahhmoud","password":"01025941259"},"level":"error","message":"[POST] /api/auth/register — Email already in use","stack":"Error: Email already in use\n    at AuthService.register (D:\\Training\\Java\\java_backend\\services\\auth.service.js:39:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async register (D:\\Training\\Java\\java_backend\\controllers\\auth.controller.js:8:22)","timestamp":"2026-07-26 02:25:11","userId":"unauthenticated"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"POST /api/auth/register 409 — 186ms","timestamp":"2026-07-26 02:25:11","userId":"-"}
+{"body":{"email":"mr.houda2003@gmail.com","name":"Mahhmoud","password":"01025941259"},"level":"error","message":"[POST] /api/auth/register — Email already in use","stack":"Error: Email already in use\n    at AuthService.register (D:\\Training\\Java\\java_backend\\services\\auth.service.js:39:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async register (D:\\Training\\Java\\java_backend\\controllers\\auth.controller.js:8:22)","timestamp":"2026-07-26 02:25:23","userId":"unauthenticated"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"POST /api/auth/register 409 — 63ms","timestamp":"2026-07-26 02:25:23","userId":"-"}
+{"error":"Invalid login: 535 5.7.8 Authentication failed","level":"error","message":"[Email] Failed to send verification email","timestamp":"2026-07-26 02:25:31"}
+{"body":{"email":"mr.houda2004@gmail.com","name":"Mahhmoud","password":"01025941259"},"level":"error","message":"[POST] /api/auth/register — Failed to send verification email: Invalid login: 535 5.7.8 Authentication failed","stack":"Error: Failed to send verification email: Invalid login: 535 5.7.8 Authentication failed\n    at sendVerificationEmail (D:\\Training\\Java\\java_backend\\services\\email.service.js:44:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async _sendCode (D:\\Training\\Java\\java_backend\\services\\auth.service.js:250:5)\n    at async AuthService.register (D:\\Training\\Java\\java_backend\\services\\auth.service.js:54:5)\n    at async register (D:\\Training\\Java\\java_backend\\controllers\\auth.controller.js:8:22)","timestamp":"2026-07-26 02:25:31","userId":"unauthenticated"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"POST /api/auth/register 500 — 1047ms","timestamp":"2026-07-26 02:25:31","userId":"-"}
+{"body":{"email":"mr.houda2004@gmail.com","name":"Mahhmoud","password":"01025941259"},"level":"error","message":"[POST] /api/auth/register — Email already in use","stack":"Error: Email already in use\n    at AuthService.register (D:\\Training\\Java\\java_backend\\services\\auth.service.js:39:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async register (D:\\Training\\Java\\java_backend\\controllers\\auth.controller.js:8:22)","timestamp":"2026-07-26 02:27:01","userId":"unauthenticated"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"POST /api/auth/register 409 — 77ms","timestamp":"2026-07-26 02:27:01","userId":"-"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:27:09"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:27:09"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:27:09"}
+{"body":{"email":"mr.houda2004@gmail.com","name":"Mahhmoud","password":"01025941259"},"level":"error","message":"[POST] /api/auth/register — Email already in use","stack":"Error: Email already in use\n    at AuthService.register (D:\\Training\\Java\\java_backend\\services\\auth.service.js:39:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async register (D:\\Training\\Java\\java_backend\\controllers\\auth.controller.js:8:22)","timestamp":"2026-07-26 02:27:14","userId":"unauthenticated"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"POST /api/auth/register 409 — 119ms","timestamp":"2026-07-26 02:27:14","userId":"-"}
+{"level":"error","message":"[GET] /api/users?page=1&limit=10 — Access token expired","stack":"Error: Access token expired\n    at verifyAccessToken (D:\\Training\\Java\\java_backend\\utils\\jwt.js:31:13)\n    at authenticate (D:\\Training\\Java\\java_backend\\middlewares\\auth.js:13:21)\n    at Layer.handleRequest (D:\\Training\\Java\\java_backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:342:13)\n    at D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:297:9\n    at processParams (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:582:12)\n    at next (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:291:5)\n    at router.handle (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:186:3)\n    at router (D:\\Training\\Java\\java_backend\\node_modules\\router\\index.js:60:12)\n    at Layer.handleRequest (D:\\Training\\Java\\java_backend\\node_modules\\router\\lib\\layer.js:152:17)","timestamp":"2026-07-26 02:27:28","userId":"unauthenticated"}
+{"ip":"::1","level":"warn","message":"GET /api/users?page=1&limit=10 401 — 6ms","timestamp":"2026-07-26 02:27:28","userId":"-"}
+{"ip":"::1","level":"info","message":"POST /api/auth/login 200 — 369ms","timestamp":"2026-07-26 02:27:32","userId":"-"}
+{"ip":"::1","level":"info","message":"GET /api/users?page=1&limit=10 200 — 52ms","timestamp":"2026-07-26 02:27:35","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:30:02"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:30:02"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:30:02"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:30:06"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:30:06"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:30:06"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:30:09"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:30:09"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:30:09"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:30:12"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:30:12"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:30:12"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","timestamp":"2026-07-26 02:31:19"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:31:22"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:31:22"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:31:22"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","timestamp":"2026-07-26 02:31:39"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:31:41"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:31:41"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:31:41"}
+{"level":"info","message":"[Email] Verification code sent to mr.houda2005@gmail.com","timestamp":"2026-07-26 02:31:54"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/register 201 — 1580ms","timestamp":"2026-07-26 02:31:54","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/login 200 — 712ms","timestamp":"2026-07-26 02:36:19","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 28ms","timestamp":"2026-07-26 02:36:20","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 4ms","timestamp":"2026-07-26 02:36:20","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Connected: 23RfAbKlKv8XNKc9AAAC | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 02:36:20"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 107ms","timestamp":"2026-07-26 02:36:20","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 88ms","timestamp":"2026-07-26 02:36:20","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 8ms","timestamp":"2026-07-26 02:36:21","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-26 02:36:21","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products?page=1&limit=100 200 — 75ms","timestamp":"2026-07-26 02:36:42","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors?page=1&limit=100 200 — 82ms","timestamp":"2026-07-26 02:36:43","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories?page=1&limit=100 200 — 16ms","timestamp":"2026-07-26 02:36:43","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/users?page=1&limit=100 200 — 153ms","timestamp":"2026-07-26 02:36:44","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/stock 200 — 14ms","timestamp":"2026-07-26 02:36:44","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: 23RfAbKlKv8XNKc9AAAC","timestamp":"2026-07-26 02:37:30"}
+{"level":"info","message":"[Socket] Connected: SEziTFPN3_IqX_QFAAAE | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 02:37:46"}
+{"level":"info","message":"[Socket] Disconnected: SEziTFPN3_IqX_QFAAAE","timestamp":"2026-07-26 02:37:55"}
+{"level":"info","message":"[Socket] Connected: 6gqHip3u4NtLbMkyAAAJ | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 02:40:17"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/auth/me 200 — 159ms","timestamp":"2026-07-26 02:40:17","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 28ms","timestamp":"2026-07-26 02:40:18","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: 6gqHip3u4NtLbMkyAAAJ","timestamp":"2026-07-26 02:40:18"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 42ms","timestamp":"2026-07-26 02:40:18","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Connected: 2tuyJXH-YJHNkAfnAAAL | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 02:40:18"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 5ms","timestamp":"2026-07-26 02:40:19","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:40:49"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:40:49"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:40:49"}
+{"level":"info","message":"[Socket] Connected: 39QgkX3HzMFQhhNmAAAB | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 02:40:51"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/logout 200 — 174ms","timestamp":"2026-07-26 02:41:01","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: 39QgkX3HzMFQhhNmAAAB","timestamp":"2026-07-26 02:41:02"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:44:35"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:44:35"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:44:35"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:44:37"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:44:37"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:44:37"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:45:00"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:45:00"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:45:00"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:45:18"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:45:19"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:45:19"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:45:25"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:45:25"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:45:25"}
+{"level":"info","message":"[Email] Verification code sent to mr.houda2006@gmail.com","timestamp":"2026-07-26 02:47:18"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/register 201 — 3426ms","timestamp":"2026-07-26 02:47:18","userId":"-"}
+{"body":{"code":"532568","email":"mr.houda2006@gmail.com"},"level":"error","message":"[POST] /api/auth/verify-email — Invalid or expired verification code","stack":"Error: Invalid or expired verification code\n    at AuthService.verifyEmail (D:\\Training\\Java\\java_backend\\services\\auth.service.js:70:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async verifyEmail (D:\\Training\\Java\\java_backend\\controllers\\auth.controller.js:22:22)","timestamp":"2026-07-26 02:47:34","userId":"unauthenticated"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"POST /api/auth/verify-email 400 — 86ms","timestamp":"2026-07-26 02:47:34","userId":"-"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 02:48:12"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 02:48:13"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 02:48:13"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/login 200 — 638ms","timestamp":"2026-07-26 02:49:15","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 13ms","timestamp":"2026-07-26 02:49:15","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Connected: z5GBQhJisq4-hpxjAAAC | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 02:49:15"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 4ms","timestamp":"2026-07-26 02:49:16","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 48ms","timestamp":"2026-07-26 02:49:16","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 554ms","timestamp":"2026-07-26 02:49:16","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 209ms","timestamp":"2026-07-26 02:49:16","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 9ms","timestamp":"2026-07-26 02:49:16","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products?page=1&limit=100 200 — 16ms","timestamp":"2026-07-26 02:49:18","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors?page=1&limit=100 200 — 76ms","timestamp":"2026-07-26 02:49:18","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories?page=1&limit=100 200 — 8ms","timestamp":"2026-07-26 02:49:18","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/users?page=1&limit=100 200 — 12ms","timestamp":"2026-07-26 02:49:18","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/stock 200 — 8ms","timestamp":"2026-07-26 02:49:18","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: z5GBQhJisq4-hpxjAAAC","timestamp":"2026-07-26 02:51:48"}
+{"level":"info","message":"[Socket] Connected: jbFVTVv594PI6b3WAAAF | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 02:52:00"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/auth/me 200 — 143ms","timestamp":"2026-07-26 02:52:00","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 203ms","timestamp":"2026-07-26 02:52:00","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: jbFVTVv594PI6b3WAAAF","timestamp":"2026-07-26 02:52:00"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 36ms","timestamp":"2026-07-26 02:52:00","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Connected: o9jlZVefhe7uVsjDAAAH | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 02:52:00"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 9ms","timestamp":"2026-07-26 02:52:01","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products?page=1&limit=100 200 — 8ms","timestamp":"2026-07-26 02:52:09","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors?page=1&limit=100 200 — 5ms","timestamp":"2026-07-26 02:52:09","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories?page=1&limit=100 200 — 73ms","timestamp":"2026-07-26 02:52:10","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/users?page=1&limit=100 200 — 72ms","timestamp":"2026-07-26 02:52:10","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/stock 200 — 68ms","timestamp":"2026-07-26 02:52:10","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"DELETE /api/users/05f4fe12-330b-44c3-a2d3-af79f8e16447 200 — 232ms","timestamp":"2026-07-26 02:52:21","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 7ms","timestamp":"2026-07-26 02:52:21","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 20ms","timestamp":"2026-07-26 02:52:21","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 6ms","timestamp":"2026-07-26 02:52:21","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"DELETE /api/users/43407060-559f-4f23-b498-53fb3f2f8943 200 — 22ms","timestamp":"2026-07-26 02:52:22","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 3ms","timestamp":"2026-07-26 02:52:23","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 13ms","timestamp":"2026-07-26 02:52:23","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 9ms","timestamp":"2026-07-26 02:52:23","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"DELETE /api/users/67df8f8d-c36a-4499-b04e-00d8c6606c7a 200 — 18ms","timestamp":"2026-07-26 02:52:24","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 2ms","timestamp":"2026-07-26 02:52:24","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 12ms","timestamp":"2026-07-26 02:52:24","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 5ms","timestamp":"2026-07-26 02:52:24","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"DELETE /api/users/b4e520f2-b50d-46cc-9078-eab30b209e82 200 — 13ms","timestamp":"2026-07-26 02:52:26","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 5ms","timestamp":"2026-07-26 02:52:26","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 39ms","timestamp":"2026-07-26 02:52:26","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 5ms","timestamp":"2026-07-26 02:52:27","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"DELETE /api/users/b24cf118-644a-4dfd-99c4-36b08f56b906 200 — 54ms","timestamp":"2026-07-26 02:52:28","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 5ms","timestamp":"2026-07-26 02:52:28","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 15ms","timestamp":"2026-07-26 02:52:28","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 7ms","timestamp":"2026-07-26 02:52:28","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"error","message":"[DELETE] /api/users/e1658c58-8e1c-4a8f-a229-01dfd0d3f8b0 — update or delete on table \"users\" violates RESTRICT setting of foreign key constraint \"orders_cashierId_fkey\" on table \"orders\"","stack":"DriverAdapterError: update or delete on table \"users\" violates RESTRICT setting of foreign key constraint \"orders_cashierId_fkey\" on table \"orders\"\n    at PrismaPgAdapter.onError (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\adapter-pg\\dist\\index.js:678:11)\n    at PrismaPgAdapter.performIO (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\adapter-pg\\dist\\index.js:673:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async PrismaPgAdapter.queryRaw (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\adapter-pg\\dist\\index.js:604:30)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:44621)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:45065)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:43744)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:46285)\n    at async e.run (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:43335)\n    at async e.execute (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:57:815)","timestamp":"2026-07-26 02:52:32","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"DELETE /api/users/e1658c58-8e1c-4a8f-a229-01dfd0d3f8b0 500 — 55ms","timestamp":"2026-07-26 02:52:32","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"error","message":"[DELETE] /api/users/e1658c58-8e1c-4a8f-a229-01dfd0d3f8b0 — update or delete on table \"users\" violates RESTRICT setting of foreign key constraint \"orders_cashierId_fkey\" on table \"orders\"","stack":"DriverAdapterError: update or delete on table \"users\" violates RESTRICT setting of foreign key constraint \"orders_cashierId_fkey\" on table \"orders\"\n    at PrismaPgAdapter.onError (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\adapter-pg\\dist\\index.js:678:11)\n    at PrismaPgAdapter.performIO (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\adapter-pg\\dist\\index.js:673:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async PrismaPgAdapter.queryRaw (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\adapter-pg\\dist\\index.js:604:30)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:44621)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:45065)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:43744)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:46285)\n    at async e.run (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:43335)\n    at async e.execute (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:57:815)","timestamp":"2026-07-26 02:52:43","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"DELETE /api/users/e1658c58-8e1c-4a8f-a229-01dfd0d3f8b0 500 — 271ms","timestamp":"2026-07-26 02:52:43","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/logout 200 — 152ms","timestamp":"2026-07-26 02:53:04","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: o9jlZVefhe7uVsjDAAAH","timestamp":"2026-07-26 02:53:04"}
+{"level":"info","message":"[Email] Verification code sent to ibeso4081@gmail.com","timestamp":"2026-07-26 02:59:04"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/register 201 — 1756ms","timestamp":"2026-07-26 02:59:04","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/verify-email 200 — 104ms","timestamp":"2026-07-26 03:00:44","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/login 200 — 446ms","timestamp":"2026-07-26 03:01:01","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 8ms","timestamp":"2026-07-26 03:01:01","userId":"1d19df72-32a7-444a-872d-b6a7a1a13fc8"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 35ms","timestamp":"2026-07-26 03:01:01","userId":"1d19df72-32a7-444a-872d-b6a7a1a13fc8"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 40ms","timestamp":"2026-07-26 03:01:01","userId":"1d19df72-32a7-444a-872d-b6a7a1a13fc8"}
+{"level":"info","message":"[Socket] Connected: 2ky96QRVWpdij01-AAAK | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-07-26 03:01:01"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 3ms","timestamp":"2026-07-26 03:01:02","userId":"1d19df72-32a7-444a-872d-b6a7a1a13fc8"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 03:04:48"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 03:04:48"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 03:04:48"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 03:04:50"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 03:04:50"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 03:04:50"}
+{"level":"error","message":"[Socket Auth Error] Access token expired","timestamp":"2026-07-26 03:04:51"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/logout 200 — 145ms","timestamp":"2026-07-26 03:05:13","userId":"1d19df72-32a7-444a-872d-b6a7a1a13fc8"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/login 200 — 568ms","timestamp":"2026-07-26 03:05:33","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 20ms","timestamp":"2026-07-26 03:05:33","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 69ms","timestamp":"2026-07-26 03:05:34","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"error","message":"[Socket Auth Error] Access token expired","timestamp":"2026-07-26 03:05:34"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 92ms","timestamp":"2026-07-26 03:05:34","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/logout 200 — 60ms","timestamp":"2026-07-26 03:06:46","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"POST /api/auth/login 200 — 438ms","timestamp":"2026-07-26 03:07:18","userId":"-"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 5ms","timestamp":"2026-07-26 03:07:18","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 33ms","timestamp":"2026-07-26 03:07:18","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"error","message":"[Socket Auth Error] Access token expired","timestamp":"2026-07-26 03:07:18"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 14ms","timestamp":"2026-07-26 03:07:18","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products?page=1&limit=100 200 — 77ms","timestamp":"2026-07-26 03:07:32","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors?page=1&limit=100 200 — 63ms","timestamp":"2026-07-26 03:07:32","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories?page=1&limit=100 200 — 8ms","timestamp":"2026-07-26 03:07:32","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/users?page=1&limit=100 200 — 14ms","timestamp":"2026-07-26 03:07:33","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/stock 200 — 145ms","timestamp":"2026-07-26 03:07:33","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"error","message":"[DELETE] /api/users/1d19df72-32a7-444a-872d-b6a7a1a13fc8 — update or delete on table \"users\" violates RESTRICT setting of foreign key constraint \"audit_logs_userId_fkey\" on table \"audit_logs\"","stack":"DriverAdapterError: update or delete on table \"users\" violates RESTRICT setting of foreign key constraint \"audit_logs_userId_fkey\" on table \"audit_logs\"\n    at PrismaPgAdapter.onError (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\adapter-pg\\dist\\index.js:678:11)\n    at PrismaPgAdapter.performIO (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\adapter-pg\\dist\\index.js:673:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async PrismaPgAdapter.queryRaw (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\adapter-pg\\dist\\index.js:604:30)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:44621)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:45065)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:43744)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:46285)\n    at async e.run (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:43335)\n    at async e.execute (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:57:815)","timestamp":"2026-07-26 03:07:38","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"DELETE /api/users/1d19df72-32a7-444a-872d-b6a7a1a13fc8 500 — 25ms","timestamp":"2026-07-26 03:07:38","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"error","message":"[DELETE] /api/users/1d19df72-32a7-444a-872d-b6a7a1a13fc8 — update or delete on table \"users\" violates RESTRICT setting of foreign key constraint \"audit_logs_userId_fkey\" on table \"audit_logs\"","stack":"DriverAdapterError: update or delete on table \"users\" violates RESTRICT setting of foreign key constraint \"audit_logs_userId_fkey\" on table \"audit_logs\"\n    at PrismaPgAdapter.onError (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\adapter-pg\\dist\\index.js:678:11)\n    at PrismaPgAdapter.performIO (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\adapter-pg\\dist\\index.js:673:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async PrismaPgAdapter.queryRaw (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\adapter-pg\\dist\\index.js:604:30)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:44621)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:45065)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:43744)\n    at async e.interpretNode (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:46285)\n    at async e.run (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:11:43335)\n    at async e.execute (D:\\Training\\Java\\java_backend\\node_modules\\@prisma\\client\\runtime\\client.js:57:815)","timestamp":"2026-07-26 03:07:46","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"DELETE /api/users/1d19df72-32a7-444a-872d-b6a7a1a13fc8 500 — 81ms","timestamp":"2026-07-26 03:07:46","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-26 03:10:58"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-26 03:10:59"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-26 03:10:59"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"DELETE /api/users/1d19df72-32a7-444a-872d-b6a7a1a13fc8 200 — 154ms","timestamp":"2026-07-26 03:11:31","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 11ms","timestamp":"2026-07-26 03:11:32","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 30ms","timestamp":"2026-07-26 03:11:32","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 12ms","timestamp":"2026-07-26 03:11:32","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"DELETE /api/users/e1658c58-8e1c-4a8f-a229-01dfd0d3f8b0 200 — 23ms","timestamp":"2026-07-26 03:11:35","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/categories/active 200 — 3ms","timestamp":"2026-07-26 03:11:35","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/products 200 — 8ms","timestamp":"2026-07-26 03:11:35","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-07-26 03:11:35","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"error","message":"[Socket Auth Error] Access token expired","timestamp":"2026-07-26 03:13:01"}

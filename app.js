@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 const express = require("express");
 const helmet = require("helmet");
 const cors = require("cors");
@@ -9,8 +10,11 @@ const requestLogger = require("./middlewares/requestLogger");
 const { errorHandler, notFoundHandler } = require("./middlewares/error");
 
 const authRoutes = require("./routes/auth.routes");
+
 const userRoutes = require("./routes/user.routes");
+
 const categoryRoutes = require("./routes/category.routes");
+
 const productRoutes = require("./routes/product.routes");
 
 const {
