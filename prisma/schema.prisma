@@ -36,6 +36,13 @@ enum PaymentMethod {
   VODAFONE_CASH
 }
 
+enum PaymentNumberType {
+  INSTAPAY
+  VODAFONE_CASH
+}
+
+
+
 enum PaymentStatus {
   PENDING
   CONFIRMED
@@ -185,6 +192,22 @@ model OrderItemFlavor {
   @@unique([orderItemId, flavorId])
   @@index([orderItemId])
   @@map("order_item_flavors")
+}
+
+
+model PaymentNumber {
+  id        String            @id @default(uuid())
+  type      PaymentNumberType
+  number    String
+  name      String            // اسم صاحب الرقم
+  isDefault Boolean           @default(false)
+  active    Boolean           @default(true)
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @updatedAt
+
+  @@index([type])
+  @@index([isDefault])
+  @@map("payment_numbers")
 }
 
 model StockItem {

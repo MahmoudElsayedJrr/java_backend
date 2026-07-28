@@ -1,10 +1,14 @@
+
 const express = require("express");
+
 const {
   flavorController: fc,
   orderController: oc,
   reportController: rc,
   stockController: stc,
+  paymentNumberController: pnc ,
 } = require("../controllers/index");
+
 
 const { authenticate, authorize } = require("../middlewares/auth");
 const { validate, validateQuery } = require("../middlewares/validate");
@@ -13,6 +17,7 @@ const sv = require("../validators/stockItem.validator");
 const v = require("../validators/flavor.validator");
 const iv = require("../validators/inventory-shift.validator");
 const ov = require("../validators/order.validator");
+const pv  = require('../validators/paymentnumber.validator');
 
 // ── Flavors ──────────────────────────────────────────────────
 const flavorRouter = express.Router();
@@ -124,6 +129,18 @@ orderRouter.get(
 );
 orderRouter.get("/:id", authorize("ADMIN", "CASHIER"), oc.getById);
 
+// ── Payment Numbers ────────────────────────────────────────────
+const paymentNumberRouter = express.Router();
+paymentNumberRouter.get('/defaults',        authenticate, pnc.getDefaults);
+paymentNumberRouter.get('/type/:type',      authenticate, pnc.getByType);
+ 
+paymentNumberRouter.get('/',                authenticate, authorize('ADMIN'), validateQuery(pv.listQuery), pnc.getAll);
+paymentNumberRouter.get('/:id',             authenticate, authorize('ADMIN'), pnc.getById);
+paymentNumberRouter.post('/',               authenticate, authorize('ADMIN'), validate(pv.create),         pnc.create);
+paymentNumberRouter.patch('/:id',           authenticate, authorize('ADMIN'), validate(pv.update),         pnc.update);
+paymentNumberRouter.patch('/:id/default',   authenticate, authorize('ADMIN'), pnc.setDefault);
+paymentNumberRouter.delete('/:id',          authenticate, authorize('ADMIN'), pnc.delete);
+
 // ── Reports ───────────────────────────────────────────────────
 const reportRouter = express.Router();
 reportRouter.use(authenticate, authorize("ADMIN"));
@@ -132,4 +149,4 @@ reportRouter.get("/weekly", rc.weekly);
 reportRouter.get("/monthly", rc.monthly);
 reportRouter.get("/custom", rc.custom);
 
-module.exports = { flavorRouter, orderRouter, reportRouter, stockRouter };
+module.exports = { flavorRouter, orderRouter, paymentNumberRouter, reportRouter, stockRouter };

@@ -22,6 +22,7 @@ const {
   orderRouter,
   reportRouter,
   stockRouter,
+  paymentNumberRouter,
 } = require("./routes/index.routes");
 
 const app = express();
@@ -57,6 +58,7 @@ app.use("/api/flavors", flavorRouter);
 app.use("/api/stock", stockRouter);
 app.use("/api/orders", orderRouter);
 app.use("/api/reports", reportRouter);
+app.use('/api/payment-numbers', paymentNumberRouter);
 
 app.use(notFoundHandler);
 app.use(errorHandler);

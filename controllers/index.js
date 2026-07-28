@@ -4,7 +4,9 @@ const orderService = require("../services/order.service");
 
 const reportService = require("../services/report.service");
 
-const stockService = require('../services/stockItem.service');
+const paymentNumberService = require("../services/paymentNumber.service");
+
+const stockService = require("../services/stockItem.service");
 
 const { sendSuccess, paginate } = require("../utils/response");
 
@@ -75,54 +77,86 @@ class StockController {
     try {
       const { data, total, page, limit } = await stockService.getAll(req.query);
       sendSuccess(res, { data, meta: paginate({ page, limit, total }) });
-    } catch (err) { next(err); }
+    } catch (err) {
+      next(err);
+    }
   }
- 
+
   async getById(req, res, next) {
     try {
       sendSuccess(res, { data: await stockService.getById(req.params.id) });
-    } catch (err) { next(err); }
+    } catch (err) {
+      next(err);
+    }
   }
- 
+
   async getLowStock(req, res, next) {
     try {
       sendSuccess(res, { data: await stockService.getLowStock() });
-    } catch (err) { next(err); }
+    } catch (err) {
+      next(err);
+    }
   }
- 
+
   async create(req, res, next) {
     try {
       const item = await stockService.create(req.body, req.user.id);
-      sendSuccess(res, { data: item, message: 'Stock item created', statusCode: HTTP_STATUS.CREATED });
-    } catch (err) { next(err); }
+      sendSuccess(res, {
+        data: item,
+        message: "Stock item created",
+        statusCode: HTTP_STATUS.CREATED,
+      });
+    } catch (err) {
+      next(err);
+    }
   }
- 
+
   async update(req, res, next) {
     try {
-      const item = await stockService.update(req.params.id, req.body, req.user.id);
-      sendSuccess(res, { data: item, message: 'Stock item updated' });
-    } catch (err) { next(err); }
+      const item = await stockService.update(
+        req.params.id,
+        req.body,
+        req.user.id,
+      );
+      sendSuccess(res, { data: item, message: "Stock item updated" });
+    } catch (err) {
+      next(err);
+    }
   }
- 
+
   async addQuantity(req, res, next) {
     try {
-      const item = await stockService.addQuantity(req.params.id, req.body.amount, req.user.id);
-      sendSuccess(res, { data: item, message: 'Stock added successfully' });
-    } catch (err) { next(err); }
+      const item = await stockService.addQuantity(
+        req.params.id,
+        req.body.amount,
+        req.user.id,
+      );
+      sendSuccess(res, { data: item, message: "Stock added successfully" });
+    } catch (err) {
+      next(err);
+    }
   }
- 
+
   async deductQuantity(req, res, next) {
     try {
-      const item = await stockService.deductQuantity(req.params.id, req.body.amount, req.user.id);
-      sendSuccess(res, { data: item, message: 'Stock deducted successfully' });
-    } catch (err) { next(err); }
+      const item = await stockService.deductQuantity(
+        req.params.id,
+        req.body.amount,
+        req.user.id,
+      );
+      sendSuccess(res, { data: item, message: "Stock deducted successfully" });
+    } catch (err) {
+      next(err);
+    }
   }
- 
+
   async delete(req, res, next) {
     try {
       await stockService.delete(req.params.id, req.user.id);
-      sendSuccess(res, { message: 'Stock item deleted' });
-    } catch (err) { next(err); }
+      sendSuccess(res, { message: "Stock item deleted" });
+    } catch (err) {
+      next(err);
+    }
   }
 }
 
@@ -288,6 +322,98 @@ class OrderController {
   }
 }
 
+class PaymentNumberController {
+  async getDefaults(req, res, next) {
+    try {
+      sendSuccess(res, { data: await paymentNumberService.getDefaults() });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async getByType(req, res, next) {
+    try {
+      sendSuccess(res, {
+        data: await paymentNumberService.getByType(req.params.type),
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  // Admin
+  async getAll(req, res, next) {
+    try {
+      const { data, total, page, limit } = await paymentNumberService.getAll(
+        req.query,
+      );
+      sendSuccess(res, { data, meta: paginate({ page, limit, total }) });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async getById(req, res, next) {
+    try {
+      sendSuccess(res, {
+        data: await paymentNumberService.getById(req.params.id),
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async create(req, res, next) {
+    try {
+      const item = await paymentNumberService.create(req.body, req.user.id);
+      sendSuccess(res, {
+        data: item,
+        message: "Payment number added",
+        statusCode: HTTP_STATUS.CREATED,
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async update(req, res, next) {
+    try {
+      const item = await paymentNumberService.update(
+        req.params.id,
+        req.body,
+        req.user.id,
+      );
+      sendSuccess(res, { data: item, message: "Payment number updated" });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async setDefault(req, res, next) {
+    try {
+      const item = await paymentNumberService.setDefault(
+        req.params.id,
+        req.user.id,
+      );
+      sendSuccess(res, {
+        data: item,
+        message: "Default payment number updated",
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async delete(req, res, next) {
+    try {
+      await paymentNumberService.delete(req.params.id, req.user.id);
+      sendSuccess(res, { message: "Payment number deleted" });
+    } catch (err) {
+      next(err);
+    }
+  }
+}
+
 // ── Report ───────────────────────────────────────────────────
 class ReportController {
   async daily(req, res, next) {
@@ -331,4 +457,5 @@ module.exports = {
   orderController: new OrderController(),
   reportController: new ReportController(),
   stockController: new StockController(),
+  paymentNumberController: new PaymentNumberController(),
 };

@@ -69,16 +69,16 @@ class AuthService {
     if (!record)
       throw new BadRequestError("Invalid or expired verification code");
 
-    // Mark code as used
+   
     await codeRepo.markAsUsed(record.id);
 
-    // Activate user
+  
     const user = await userRepo.updateUser(
       (await userRepo.findByEmail(email)).id,
       { emailVerified: true, active: true },
     );
 
-    // Auto-login after verification
+
     const payload = { id: user.id, role: user.role };
     const accessToken = signAccessToken(payload);
     const refreshToken = signRefreshToken(payload);
