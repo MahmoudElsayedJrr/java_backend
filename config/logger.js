@@ -23,6 +23,8 @@ const logger = createLogger({
         timestamp({ format: 'HH:mm:ss' }),
         consoleFormat,
       ),
+      handleExceptions: true,
+      handleRejections: true,
     }),
     // Error log file
     new transports.File({
@@ -35,26 +37,18 @@ const logger = createLogger({
       filename: path.join('logs', 'combined.log'),
       format: combine(timestamp(), format.json()),
     }),
-  ],
-  exceptionHandlers: [
-    new transports.Console({
-      format: combine(
-        colorize(),
-        timestamp({ format: 'HH:mm:ss' }),
-        consoleFormat,
-      ),
+    // Exception log file
+    new transports.File({
+      filename: path.join('logs', 'exceptions.log'),
+      format: combine(timestamp(), format.json()),
+      handleExceptions: true,
     }),
-    new transports.File({ filename: path.join('logs', 'exceptions.log') }),
-  ],
-  rejectionHandlers: [
-    new transports.Console({
-      format: combine(
-        colorize(),
-        timestamp({ format: 'HH:mm:ss' }),
-        consoleFormat,
-      ),
+    // Rejection log file
+    new transports.File({
+      filename: path.join('logs', 'rejections.log'),
+      format: combine(timestamp(), format.json()),
+      handleRejections: true,
     }),
-    new transports.File({ filename: path.join('logs', 'rejections.log') }),
   ],
 });
 
