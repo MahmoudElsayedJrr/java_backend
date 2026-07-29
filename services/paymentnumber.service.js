@@ -1,4 +1,4 @@
-const paymentNumberRepo = require('../repositories/paymentNumber.repository');
+const paymentNumberRepo = require('../repositories/paymentnumber.repository');
 const auditLogRepo      = require('../repositories/auditLog.repository');
 const { NotFoundError, BadRequestError } = require('../utils/errors');
 const { parsePagination } = require('../utils/helpers');
