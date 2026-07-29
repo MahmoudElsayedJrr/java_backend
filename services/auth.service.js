@@ -38,7 +38,22 @@ class AuthService {
   // ── Register ──────────────────────────────────────────────
   async register(data) {
     const existing = await userRepo.findByEmail(data.email);
-    if (existing) throw new ConflictError("Email already in use");
+    if (existing) {
+      if (!existing.emailVerified) {
+        // If account exists but email is not verified yet, update details & resend verification code
+        const hashed = await bcrypt.hash(data.password, SALT_ROUNDS);
+        await userRepo.updateUser(existing.id, {
+          name: data.name,
+          password: hashed,
+        });
+        _sendCode(existing.email, data.name, "EMAIL_VERIFICATION").catch(() => null);
+        return {
+          message: "Verification code sent to your unverified account.",
+          email: existing.email,
+        };
+      }
+      throw new ConflictError("Email already in use");
+    }
 
     const hashed = await bcrypt.hash(data.password, SALT_ROUNDS);
 
@@ -51,12 +66,8 @@ class AuthService {
       emailVerified: false,
     });
 
-    try {
-      await _sendCode(user.email, user.name, "EMAIL_VERIFICATION");
-    } catch (err) {
-      await userRepo.delete(user.id);
-      throw err;
-    }
+    // Trigger verification code email sending asynchronously in the background (non-blocking)
+    _sendCode(user.email, user.name, "EMAIL_VERIFICATION").catch(() => null);
 
     return {
       message:

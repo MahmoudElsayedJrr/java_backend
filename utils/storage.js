@@ -10,14 +10,18 @@ const logger              = require('../config/logger');
  * Returns the public URL of the uploaded file
  */
 const uploadImage = async (fileBuffer, originalName, bucket) => {
-  const ext      = path.extname(originalName).toLowerCase();
-  const filename = `${uuidv4()}${ext}`;
+  const decodedName   = decodeURIComponent(originalName);
+  const ext           = path.extname(decodedName).toLowerCase();
+  const baseName      = path.basename(decodedName, ext);
+  const cleanBaseName = baseName.replace(/\s+/g, '_');
+  const uniqueSuffix  = uuidv4().substring(0, 8);
+  const filename      = `${cleanBaseName}_${uniqueSuffix}${ext}`;
 
   const { data, error } = await supabase.storage
     .from(bucket)
     .upload(filename, fileBuffer, {
       contentType: _mimeType(ext),
-      upsert: false,
+      upsert: true,
     });
 
   if (error) {
@@ -36,9 +40,9 @@ const uploadImage = async (fileBuffer, originalName, bucket) => {
 const deleteImage = async (publicUrl, bucket) => {
   if (!publicUrl) return;
 
-  // Extract filename from URL
+  // Extract filename from URL and decode (for Arabic / special character filenames)
   const parts    = publicUrl.split('/');
-  const filename = parts[parts.length - 1];
+  const filename = decodeURIComponent(parts[parts.length - 1]);
 
   const { error } = await supabase.storage.from(bucket).remove([filename]);
 
