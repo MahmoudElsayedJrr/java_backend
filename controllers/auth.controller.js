@@ -48,6 +48,16 @@ class AuthController {
     }
   }
 
+  async googleLogin(req, res, next) {
+    try {
+      const { idToken } = req.body;
+      const result = await authService.googleLogin(idToken);
+      sendSuccess(res, { data: result, message: "Login successful" });
+    } catch (err) {
+      next(err);
+    }
+  }
+
   async forgotPassword(req, res, next) {
     try {
       const result = await authService.forgotPassword(req.body.email);

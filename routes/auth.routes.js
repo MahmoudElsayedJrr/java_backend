@@ -22,6 +22,7 @@ router.post(
   ctrl.resendVerification,
 );
 router.post("/login", authLimiter, validate(v.login), ctrl.login);
+router.post("/google", authLimiter, ctrl.googleLogin);
 router.post(
   "/forgot-password",
   authLimiter,

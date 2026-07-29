@@ -1,5 +1,7 @@
 const bcrypt = require("bcryptjs");
 const crypto = require("crypto");
+const { OAuth2Client } = require("google-auth-library");
+const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 const userRepo = require("../repositories/user.repository");
 const refreshTokenRepo = require("../repositories/refreshToken.repository");
 const auditLogRepo = require("../repositories/auditLog.repository");
@@ -125,6 +127,60 @@ class AuthService {
     const payload = { id: user.id, role: user.role };
     const accessToken = signAccessToken(payload);
     const refreshToken = signRefreshToken(payload);
+    const expiresAt = new Date(Date.now() + REFRESH_TTL_MS);
+    await refreshTokenRepo.create(user.id, refreshToken, expiresAt);
+
+    await auditLogRepo.log({
+      userId: user.id,
+      action: AUDIT_ACTIONS.LOGIN,
+      entity: "User",
+      entityId: user.id,
+    });
+
+    const { password: _, ...safeUser } = user;
+    return { user: safeUser, accessToken, refreshToken };
+  }
+
+  // ── Google Login ──────────────────────────────────────────
+  async googleLogin(idToken) {
+    if (!idToken) throw new BadRequestError("Google ID Token is required");
+
+    let payload;
+    try {
+      const ticket = await googleClient.verifyIdToken({
+        idToken: idToken,
+        audience: process.env.GOOGLE_CLIENT_ID,
+      });
+      payload = ticket.getPayload();
+    } catch (err) {
+      throw new UnauthorizedError("Invalid Google ID Token");
+    }
+
+    const { email, name, email_verified } = payload;
+    if (!email_verified) throw new UnauthorizedError("Google email is not verified");
+
+    let user = await userRepo.findByEmail(email);
+
+    if (user) {
+      if (!user.active) throw new UnauthorizedError("Account is deactivated");
+    } else {
+      // Create user if not exists
+      const randomPassword = crypto.randomBytes(16).toString("hex");
+      const hashed = await bcrypt.hash(randomPassword, SALT_ROUNDS);
+
+      user = await userRepo.createUser({
+        name: name || email.split("@")[0],
+        email: email,
+        password: hashed,
+        role: "CUSTOMER",
+        active: true,
+        emailVerified: true,
+      });
+    }
+
+    const tokenPayload = { id: user.id, role: user.role };
+    const accessToken = signAccessToken(tokenPayload);
+    const refreshToken = signRefreshToken(tokenPayload);
     const expiresAt = new Date(Date.now() + REFRESH_TTL_MS);
     await refreshTokenRepo.create(user.id, refreshToken, expiresAt);
 
