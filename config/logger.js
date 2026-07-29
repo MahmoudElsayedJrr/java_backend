@@ -37,9 +37,23 @@ const logger = createLogger({
     }),
   ],
   exceptionHandlers: [
+    new transports.Console({
+      format: combine(
+        colorize(),
+        timestamp({ format: 'HH:mm:ss' }),
+        consoleFormat,
+      ),
+    }),
     new transports.File({ filename: path.join('logs', 'exceptions.log') }),
   ],
   rejectionHandlers: [
+    new transports.Console({
+      format: combine(
+        colorize(),
+        timestamp({ format: 'HH:mm:ss' }),
+        consoleFormat,
+      ),
+    }),
     new transports.File({ filename: path.join('logs', 'rejections.log') }),
   ],
 });
