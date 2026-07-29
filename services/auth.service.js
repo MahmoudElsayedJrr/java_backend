@@ -46,7 +46,7 @@ class AuthService {
           name: data.name,
           password: hashed,
         });
-        _sendCode(existing.email, data.name, "EMAIL_VERIFICATION").catch(() => null);
+        await _sendCode(existing.email, data.name, "EMAIL_VERIFICATION");
         return {
           message: "Verification code sent to your unverified account.",
           email: existing.email,
@@ -66,8 +66,8 @@ class AuthService {
       emailVerified: false,
     });
 
-    // Trigger verification code email sending asynchronously in the background (non-blocking)
-    _sendCode(user.email, user.name, "EMAIL_VERIFICATION").catch(() => null);
+    // Send verification code email synchronously to catch errors early
+    await _sendCode(user.email, user.name, "EMAIL_VERIFICATION");
 
     return {
       message:

@@ -7207,3 +7207,22 @@
 {"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-29 03:48:39"}
 {"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-29 03:48:46"}
 {"level":"info","message":"✅ Database connected","timestamp":"2026-07-29 03:48:46"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-29 16:04:31"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-29 16:04:31"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-29 16:04:31"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-29 16:08:01"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-29 16:08:01"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-29 16:08:01"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-29 16:09:58"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-29 16:09:58"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-29 16:09:58"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-29 16:10:17"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-29 16:10:17"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-29 16:10:17"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-29 16:31:13"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-29 16:31:13"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-29 16:31:13"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-29 16:44:33"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-29 16:44:33"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-29 16:44:33"}
+{"error":"Key not found","level":"error","message":"[Email] Failed to send verification email","timestamp":"2026-07-29 20:30:02"}
