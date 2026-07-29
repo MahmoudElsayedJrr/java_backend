@@ -4,7 +4,7 @@ const orderService = require("../services/order.service");
 
 const reportService = require("../services/report.service");
 
-const paymentNumberService = require("../services/paymentNumber.service");
+const paymentNumberService = require("../services/paymentnumber.service");
 
 const stockService = require("../services/stockItem.service");
 
