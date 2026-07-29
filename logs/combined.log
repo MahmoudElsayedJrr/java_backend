@@ -7174,3 +7174,9 @@
 {"level":"info","message":"✅ Database connected","timestamp":"2026-07-29 03:00:59"}
 {"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-29 03:00:59"}
 {"level":"info","message":"SIGINT received — shutting down gracefully","timestamp":"2026-07-29 03:01:01"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-29 03:15:49"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-29 03:15:49"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-29 03:15:49"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-07-29 03:16:02"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-07-29 03:16:03"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-07-29 03:16:03"}
