@@ -4,7 +4,10 @@
  */
 const generateOrderNumber = async (prisma) => {
   const today = new Date();
-  const datePart = today.toISOString().slice(0, 10).replace(/-/g, "");
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+  const datePart = `${year}${month}${day}`;
 
   // عد كل الأوردرات اللي orderNumber بيبدأ بـ JC-YYYYMMDD
   const count = await prisma.order.count({
