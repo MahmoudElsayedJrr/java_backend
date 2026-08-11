@@ -10,12 +10,22 @@ const logger              = require('../config/logger');
  * Returns the public URL of the uploaded file
  */
 const uploadImage = async (fileBuffer, originalName, bucket) => {
-  const decodedName   = decodeURIComponent(originalName);
-  const ext           = path.extname(decodedName).toLowerCase();
-  const baseName      = path.basename(decodedName, ext);
-  const cleanBaseName = baseName.replace(/\s+/g, '_');
-  const uniqueSuffix  = uuidv4().substring(0, 8);
-  const filename      = `${cleanBaseName}_${uniqueSuffix}${ext}`;
+  const decodedName = decodeURIComponent(originalName || 'product');
+  let ext = path.extname(decodedName).toLowerCase();
+  if (!ext || ext.length > 5) ext = '.jpg';
+  
+  const baseName = path.basename(decodedName, ext);
+  // Clean base name: replace spaces with '_' and strip non-ASCII/special characters to avoid S3 Invalid Key errors
+  let cleanBaseName = baseName
+    .replace(/\s+/g, '_')
+    .replace(/[^a-zA-Z0-9_-]/g, '_')
+    .replace(/_+/g, '_')
+    .replace(/^_+|_+$/g, '');
+
+  if (!cleanBaseName) cleanBaseName = 'product';
+
+  const uniqueSuffix = uuidv4().substring(0, 8);
+  const filename = `${cleanBaseName}_${uniqueSuffix}${ext}`;
 
   const { data, error } = await supabase.storage
     .from(bucket)
@@ -40,15 +50,20 @@ const uploadImage = async (fileBuffer, originalName, bucket) => {
 const deleteImage = async (publicUrl, bucket) => {
   if (!publicUrl) return;
 
-  // Extract filename from URL and decode (for Arabic / special character filenames)
-  const parts    = publicUrl.split('/');
-  const filename = decodeURIComponent(parts[parts.length - 1]);
+  try {
+    const parts = publicUrl.split('/');
+    const filename = decodeURIComponent(parts[parts.length - 1]);
 
-  const { error } = await supabase.storage.from(bucket).remove([filename]);
-
-  if (error) {
-    // Log but don't throw — deletion failure is non-critical
-    logger.warn('[Storage] Delete failed', { bucket, filename, error: error.message });
+    if (filename) {
+      const { error } = await supabase.storage.from(bucket).remove([filename]);
+      if (error) {
+        logger.warn('[Storage] Delete failed', { bucket, filename, error: error.message });
+      } else {
+        logger.info('[Storage] Successfully deleted old image', { bucket, filename });
+      }
+    }
+  } catch (err) {
+    logger.warn('[Storage] Failed to parse public URL for deletion', { publicUrl, error: err.message });
   }
 };
 

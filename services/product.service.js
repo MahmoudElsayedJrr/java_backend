@@ -70,9 +70,11 @@ class ProductService {
     const category = await categoryRepo.findById(data.categoryId);
     if (!category || !category.active) throw new BadRequestError('Category not found or inactive');
 
-    // Upload image if provided
+    // Upload image if provided (named after product)
     if (file) {
-      data.imageUrl = await uploadProductImage(file.buffer, file.originalname);
+      const ext = require('path').extname(file.originalname || '') || '.jpg';
+      const imageName = `${data.name || 'product'}${ext}`;
+      data.imageUrl = await uploadProductImage(file.buffer, imageName);
     }
 
     // Extract flavorIds before creating product
@@ -115,8 +117,15 @@ class ProductService {
     }
 
     if (file) {
-      if (existing.imageUrl) await deleteProductImage(existing.imageUrl);
-      data.imageUrl = await uploadProductImage(file.buffer, file.originalname);
+      // 1. Delete old image from Supabase bucket if present
+      if (existing.imageUrl) {
+        await deleteProductImage(existing.imageUrl);
+      }
+      // 2. Upload new image named after product
+      const ext = require('path').extname(file.originalname || '') || '.jpg';
+      const productName = data.name || existing.name || 'product';
+      const imageName = `${productName}${ext}`;
+      data.imageUrl = await uploadProductImage(file.buffer, imageName);
     }
 
     const { flavorIds, ...productData } = data;
