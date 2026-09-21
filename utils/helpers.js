@@ -1,6 +1,6 @@
 /**
  * Generate a unique order number
- * Format: JC-YYYYMMDD-XXXX  e.g. JC-20240615-0042
+ * Format: LC-YYYYMMDD-XXXX  e.g. LC-20240615-0042
  */
 const generateOrderNumber = async (prisma) => {
   const today = new Date();
@@ -9,15 +9,14 @@ const generateOrderNumber = async (prisma) => {
   const day = String(today.getDate()).padStart(2, "0");
   const datePart = `${year}${month}${day}`;
 
-  // عد كل الأوردرات اللي orderNumber بيبدأ بـ JC-YYYYMMDD
   const count = await prisma.order.count({
     where: {
-      orderNumber: { startsWith: `JC-${datePart}` },
+      orderNumber: { startsWith: `LC-${datePart}` },
     },
   });
 
   const sequence = String(count + 1).padStart(4, "0");
-  return `JC-${datePart}-${sequence}`;
+  return `LC-${datePart}-${sequence}`;
 };
 
 /**

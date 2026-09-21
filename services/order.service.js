@@ -1,3 +1,4 @@
+const logger = require("../config/logger");
 const orderRepo = require("../repositories/order.repository");
 const productRepo = require("../repositories/product.repository");
 const auditLogRepo = require("../repositories/auditLog.repository");
@@ -249,7 +250,16 @@ class OrderService {
       },
     });
 
-    getIO()?.emit(SOCKET_EVENTS.ORDER_CREATED, { order });
+    const io = getIO();
+    if (io) {
+      logger.info(`[Socket Broadcast] Emitting ${SOCKET_EVENTS.ORDER_CREATED} for order #${order.orderNumber}`);
+      io.emit(SOCKET_EVENTS.ORDER_CREATED, { order });
+      io.emit("new_order", { order });
+      io.to("ADMIN").emit(SOCKET_EVENTS.ORDER_CREATED, { order });
+      io.to("CASHIER").emit(SOCKET_EVENTS.ORDER_CREATED, { order });
+    } else {
+      logger.warn(`[Socket Broadcast] getIO() is null, cannot emit order_created`);
+    }
 
     return order;
   }
@@ -278,7 +288,13 @@ class OrderService {
       },
     });
 
-    getIO()?.emit(SOCKET_EVENTS.ORDER_UPDATED, { order: updated });
+    const io = getIO();
+    if (io) {
+      logger.info(`[Socket Broadcast] Emitting PAYMENT_CONFIRMED for order #${order.orderNumber}`);
+      io.emit(SOCKET_EVENTS.ORDER_UPDATED, { order: updated });
+      io.to("ADMIN").emit(SOCKET_EVENTS.ORDER_UPDATED, { order: updated });
+      io.to("CASHIER").emit(SOCKET_EVENTS.ORDER_UPDATED, { order: updated });
+    }
 
     return updated;
   }
@@ -320,12 +336,16 @@ class OrderService {
       metadata: { from: order.status, to: newStatus },
     });
 
-    const event =
-      newStatus === ORDER_STATUS.CANCELLED
-        ? SOCKET_EVENTS.ORDER_CANCELLED
-        : SOCKET_EVENTS.ORDER_UPDATED;
-
-    getIO()?.emit(event, { order: updated });
+    const io = getIO();
+    if (io) {
+      logger.info(`[Socket Broadcast] Emitting status change (${newStatus}) for order #${updated.orderNumber || id}`);
+      io.emit(SOCKET_EVENTS.ORDER_UPDATED, { order: updated });
+      if (newStatus === ORDER_STATUS.CANCELLED) {
+        io.emit(SOCKET_EVENTS.ORDER_CANCELLED, { order: updated });
+      }
+      io.to("ADMIN").emit(SOCKET_EVENTS.ORDER_UPDATED, { order: updated });
+      io.to("CASHIER").emit(SOCKET_EVENTS.ORDER_UPDATED, { order: updated });
+    }
 
     return updated;
   }

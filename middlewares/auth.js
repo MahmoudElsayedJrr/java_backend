@@ -2,9 +2,7 @@ const { verifyAccessToken, extractBearerToken } = require('../utils/jwt');
 const { UnauthorizedError, ForbiddenError }     = require('../utils/errors');
 const prisma = require('../config/prisma');
 
-/**
- * Protect route — verifies JWT and attaches req.user
- */
+
 const authenticate = async (req, _res, next) => {
   try {
     const token = extractBearerToken(req.headers.authorization);
@@ -12,7 +10,6 @@ const authenticate = async (req, _res, next) => {
 
     const decoded = verifyAccessToken(token);
 
-    // Fetch fresh user from DB (catches deactivated accounts mid-session)
     const user = await prisma.user.findUnique({
       where:  { id: decoded.id },
       select: { id: true, name: true, email: true, role: true, active: true },
@@ -28,10 +25,7 @@ const authenticate = async (req, _res, next) => {
   }
 };
 
-/**
- * RBAC — restrict to specific roles
- * Usage: authorize('ADMIN') or authorize('ADMIN', 'CASHIER')
- */
+
 const authorize = (...roles) => {
   return (req, _res, next) => {
     if (!req.user) return next(new UnauthorizedError('Not authenticated'));

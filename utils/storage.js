@@ -5,17 +5,13 @@ const { STORAGE_BUCKETS } = require('../constants');
 const { AppError }        = require('../utils/errors');
 const logger              = require('../config/logger');
 
-/**
- * Upload a file buffer to a Supabase Storage bucket
- * Returns the public URL of the uploaded file
- */
+
 const uploadImage = async (fileBuffer, originalName, bucket) => {
   const decodedName = decodeURIComponent(originalName || 'product');
   let ext = path.extname(decodedName).toLowerCase();
   if (!ext || ext.length > 5) ext = '.jpg';
   
   const baseName = path.basename(decodedName, ext);
-  // Clean base name: replace spaces with '_' and strip non-ASCII/special characters to avoid S3 Invalid Key errors
   let cleanBaseName = baseName
     .replace(/\s+/g, '_')
     .replace(/[^a-zA-Z0-9_-]/g, '_')
@@ -39,14 +35,11 @@ const uploadImage = async (fileBuffer, originalName, bucket) => {
     throw new AppError(`Image upload failed: ${error.message}`, 500);
   }
 
-  // Get public URL
   const { data: urlData } = supabase.storage.from(bucket).getPublicUrl(data.path);
   return urlData.publicUrl;
 };
 
-/**
- * Delete a file from Supabase Storage by its public URL
- */
+
 const deleteImage = async (publicUrl, bucket) => {
   if (!publicUrl) return;
 
@@ -67,27 +60,19 @@ const deleteImage = async (publicUrl, bucket) => {
   }
 };
 
-/**
- * Upload a product image
- */
+
 const uploadProductImage = (fileBuffer, originalName) =>
   uploadImage(fileBuffer, originalName, STORAGE_BUCKETS.PRODUCTS);
 
-/**
- * Upload a category image
- */
+
 const uploadCategoryImage = (fileBuffer, originalName) =>
   uploadImage(fileBuffer, originalName, STORAGE_BUCKETS.CATEGORIES);
 
-/**
- * Delete a product image
- */
+
 const deleteProductImage = (publicUrl) =>
   deleteImage(publicUrl, STORAGE_BUCKETS.PRODUCTS);
 
-/**
- * Delete a category image
- */
+
 const deleteCategoryImage = (publicUrl) =>
   deleteImage(publicUrl, STORAGE_BUCKETS.CATEGORIES);
 
