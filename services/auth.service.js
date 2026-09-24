@@ -6,6 +6,7 @@ const userRepo = require("../repositories/user.repository");
 const refreshTokenRepo = require("../repositories/refreshToken.repository");
 const auditLogRepo = require("../repositories/auditLog.repository");
 const codeRepo = require("../repositories/verificationCode.repository");
+const prisma = require("../config/prisma");
 
 const {
   sendVerificationEmail,
@@ -375,20 +376,54 @@ class AuthService {
     return updated;
   }
 
-  // ── Delete Account ────────────────────────────────────────
+  // ── Delete Account (Permanent Hard Delete) ─────────────────
   async deleteAccount(userId) {
     const user = await userRepo.findByIdSafe(userId);
     if (!user) throw new NotFoundError("User not found");
 
+    // 1. Revoke and delete refresh tokens
     await refreshTokenRepo.revokeAllForUser(userId);
-    await userRepo.updateUser(userId, { active: false });
-    await auditLogRepo.log({
-      userId,
-      action: "ACCOUNT_DELETED",
-      entity: "User",
-      entityId: userId,
+    await prisma.refreshToken.deleteMany({ where: { userId } }).catch(() => {});
+
+    // 2. Delete verification codes associated with user's email
+    if (user.email) {
+      await prisma.verificationCode.deleteMany({ where: { email: user.email } }).catch(() => {});
+    }
+
+    // 3. Delete favorites
+    await prisma.favoriteProduct.deleteMany({ where: { userId } }).catch(() => {});
+
+    // 4. Delete audit logs associated with this user
+    await prisma.auditLog.deleteMany({ where: { userId } }).catch(() => {});
+
+    // 5. Handle orders if any (reassign cashierId to another admin or clean up)
+    const adminUser = await prisma.user.findFirst({
+      where: { role: "ADMIN", NOT: { id: userId } },
+      select: { id: true },
     });
-    return { message: "Account deleted successfully" };
+
+    if (adminUser) {
+      await prisma.order.updateMany({
+        where: { cashierId: userId },
+        data: { cashierId: adminUser.id },
+      }).catch(() => {});
+    } else {
+      const userOrders = await prisma.order.findMany({
+        where: { cashierId: userId },
+        select: { id: true },
+      });
+      if (userOrders.length > 0) {
+        const orderIds = userOrders.map((o) => o.id);
+        await prisma.orderItemFlavor.deleteMany({ where: { orderItem: { orderId: { in: orderIds } } } }).catch(() => {});
+        await prisma.orderItem.deleteMany({ where: { orderId: { in: orderIds } } }).catch(() => {});
+        await prisma.order.deleteMany({ where: { cashierId: userId } }).catch(() => {});
+      }
+    }
+
+    // 6. Delete user permanently from database
+    await prisma.user.delete({ where: { id: userId } });
+
+    return { message: "Account permanently deleted successfully" };
   }
 }
 

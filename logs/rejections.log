@@ -1257,3 +1257,119 @@
 {"ip":"::ffff:192.168.1.22","level":"info","message":"POST /api/auth/forgot-password 200 — 373ms","timestamp":"2026-09-24 13:53:17","userId":"-"}
 {"body":{"code":"466116","email":"mr.houda2001@gmail.com","newPassword":"01025941259"},"level":"error","message":"[POST] /api/auth/reset-password — Invalid or expired reset code","stack":"Error: Invalid or expired reset code\n    at AuthService.resetPassword (D:\\Training\\Java\\java_backend\\services\\auth.service.js:224:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async resetPassword (D:\\Training\\Java\\java_backend\\controllers\\auth.controller.js:73:22)","timestamp":"2026-09-24 13:53:41","userId":"unauthenticated"}
 {"ip":"::ffff:192.168.1.22","level":"warn","message":"POST /api/auth/reset-password 400 — 47ms","timestamp":"2026-09-24 13:53:41","userId":"-"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-09-24 14:56:42"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-09-24 14:56:42"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-09-24 14:56:42"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"POST /api/auth/google 200 — 711ms","timestamp":"2026-09-24 14:57:54","userId":"-"}
+{"level":"info","message":"[Socket] Connected: 9MLq_vaKKeTx9ek-AAAB | User: c2f09762-eb83-40c7-af4d-b86aad0e8d86","timestamp":"2026-09-24 14:57:54"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/categories/active 200 — 64ms","timestamp":"2026-09-24 14:57:54","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/products 200 — 57ms","timestamp":"2026-09-24 14:57:54","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/categories/active 200 — 4ms","timestamp":"2026-09-24 14:57:55","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/flavors/active 200 — 36ms","timestamp":"2026-09-24 14:57:55","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/products 200 — 9ms","timestamp":"2026-09-24 14:57:55","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders/my-orders?page=1&limit=1 200 — 52ms","timestamp":"2026-09-24 14:57:55","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/flavors/active 200 — 69ms","timestamp":"2026-09-24 14:57:55","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders/my-orders?page=1&limit=1 200 — 38ms","timestamp":"2026-09-24 14:57:55","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 10ms","timestamp":"2026-09-24 14:57:55","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"level":"info","message":"[Socket] Disconnected: 9MLq_vaKKeTx9ek-AAAB","timestamp":"2026-09-24 14:59:21"}
+{"level":"info","message":"[Socket] Connected: KogJY7QgHKgaA4eZAAAD | User: c2f09762-eb83-40c7-af4d-b86aad0e8d86","timestamp":"2026-09-24 14:59:23"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"PATCH /api/auth/profile 200 — 58ms","timestamp":"2026-09-24 15:00:19","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 57ms","timestamp":"2026-09-24 15:01:12","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"level":"info","message":"[Socket] Disconnected: KogJY7QgHKgaA4eZAAAD","timestamp":"2026-09-24 15:03:37"}
+{"level":"info","message":"[Socket] Connected: FjsTHpbLhMNDfH3oAAAF | User: c2f09762-eb83-40c7-af4d-b86aad0e8d86","timestamp":"2026-09-24 15:04:07"}
+{"level":"info","message":"[Socket] Disconnected: FjsTHpbLhMNDfH3oAAAF","timestamp":"2026-09-24 15:05:33"}
+{"level":"info","message":"[Socket] Connected: aNbHdr2jjfqYJIkiAAAI | User: c2f09762-eb83-40c7-af4d-b86aad0e8d86","timestamp":"2026-09-24 15:07:07"}
+{"level":"info","message":"[Socket] Disconnected: aNbHdr2jjfqYJIkiAAAI","timestamp":"2026-09-24 15:07:57"}
+{"level":"info","message":"[Socket] Connected: 9oVd1OHmSx712cT7AAAK | User: c2f09762-eb83-40c7-af4d-b86aad0e8d86","timestamp":"2026-09-24 15:08:10"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/auth/me 200 — 53ms","timestamp":"2026-09-24 15:08:10","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/categories/active 200 — 55ms","timestamp":"2026-09-24 15:08:10","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/categories/active 200 — 57ms","timestamp":"2026-09-24 15:08:10","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/products 200 — 36ms","timestamp":"2026-09-24 15:08:10","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/products 200 — 34ms","timestamp":"2026-09-24 15:08:10","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/flavors/active 200 — 8ms","timestamp":"2026-09-24 15:08:10","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/flavors/active 200 — 8ms","timestamp":"2026-09-24 15:08:10","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders/my-orders?page=1&limit=1 200 — 28ms","timestamp":"2026-09-24 15:08:10","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders/my-orders?page=1&limit=1 200 — 29ms","timestamp":"2026-09-24 15:08:10","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 7ms","timestamp":"2026-09-24 15:08:11","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 5ms","timestamp":"2026-09-24 15:08:17","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"POST /api/auth/logout 200 — 26ms","timestamp":"2026-09-24 15:08:22","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"level":"info","message":"[Socket] Disconnected: 9oVd1OHmSx712cT7AAAK","timestamp":"2026-09-24 15:08:22"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"POST /api/auth/login 200 — 474ms","timestamp":"2026-09-24 15:08:45","userId":"-"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/categories/active 200 — 24ms","timestamp":"2026-09-24 15:08:45","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Connected: lP1AuL8CJ76QcO5JAAAM | User: c2f09762-eb83-40c7-af4d-b86aad0e8d86","timestamp":"2026-09-24 15:08:46"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/products?page=1&limit=100 200 — 50ms","timestamp":"2026-09-24 15:08:46","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/flavors?page=1&limit=100 200 — 14ms","timestamp":"2026-09-24 15:08:46","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/products 200 — 99ms","timestamp":"2026-09-24 15:08:46","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/categories?page=1&limit=100 200 — 13ms","timestamp":"2026-09-24 15:08:46","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/flavors/active 200 — 15ms","timestamp":"2026-09-24 15:08:46","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/users?page=1&limit=100 200 — 16ms","timestamp":"2026-09-24 15:08:46","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/stock 200 — 19ms","timestamp":"2026-09-24 15:08:46","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders?page=1&limit=1 200 — 43ms","timestamp":"2026-09-24 15:08:46","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/payment-numbers 200 — 18ms","timestamp":"2026-09-24 15:08:46","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 15ms","timestamp":"2026-09-24 15:08:50","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/products?page=1&limit=100 200 — 55ms","timestamp":"2026-09-24 15:09:05","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/flavors?page=1&limit=100 200 — 5ms","timestamp":"2026-09-24 15:09:05","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/categories?page=1&limit=100 200 — 7ms","timestamp":"2026-09-24 15:09:05","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/users?page=1&limit=100 200 — 9ms","timestamp":"2026-09-24 15:09:05","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/stock 200 — 15ms","timestamp":"2026-09-24 15:09:06","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/payment-numbers 200 — 9ms","timestamp":"2026-09-24 15:09:06","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 28ms","timestamp":"2026-09-24 15:09:07","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/reports/daily 200 — 55ms","timestamp":"2026-09-24 15:09:10","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 9ms","timestamp":"2026-09-24 15:09:13","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 8ms","timestamp":"2026-09-24 15:09:18","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: lP1AuL8CJ76QcO5JAAAM","timestamp":"2026-09-24 15:11:00"}
+{"level":"info","message":"[Socket] Connected: UPmFYk9DUr5fnskQAAAO | User: c2f09762-eb83-40c7-af4d-b86aad0e8d86","timestamp":"2026-09-24 15:13:11"}
+{"level":"info","message":"[Socket] Disconnected: UPmFYk9DUr5fnskQAAAO","timestamp":"2026-09-24 15:13:11"}
+{"level":"info","message":"[Socket] Connected: wgXKNo35_F7HxuO2AAAQ | User: c2f09762-eb83-40c7-af4d-b86aad0e8d86","timestamp":"2026-09-24 15:13:13"}
+{"level":"info","message":"[Socket] Disconnected: wgXKNo35_F7HxuO2AAAQ","timestamp":"2026-09-24 15:14:52"}
+{"level":"info","message":"[Socket] Connected: A3AVougNuYk13ipzAAAS | User: c2f09762-eb83-40c7-af4d-b86aad0e8d86","timestamp":"2026-09-24 15:15:09"}
+{"level":"info","message":"[Socket] Disconnected: A3AVougNuYk13ipzAAAS","timestamp":"2026-09-24 15:15:15"}
+{"level":"info","message":"[Socket] Connected: sNBZBZYAMm7FvCRDAAAU | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-09-24 15:15:18"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/auth/me 200 — 57ms","timestamp":"2026-09-24 15:15:19","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/categories/active 200 — 60ms","timestamp":"2026-09-24 15:15:19","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/products?page=1&limit=100 200 — 83ms","timestamp":"2026-09-24 15:15:19","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/products 200 — 10ms","timestamp":"2026-09-24 15:15:19","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/flavors?page=1&limit=100 200 — 11ms","timestamp":"2026-09-24 15:15:19","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/flavors/active 200 — 10ms","timestamp":"2026-09-24 15:15:19","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/categories?page=1&limit=100 200 — 9ms","timestamp":"2026-09-24 15:15:19","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/users?page=1&limit=100 200 — 8ms","timestamp":"2026-09-24 15:15:19","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders?page=1&limit=1 200 — 32ms","timestamp":"2026-09-24 15:15:19","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/stock 200 — 7ms","timestamp":"2026-09-24 15:15:19","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/payment-numbers 200 — 9ms","timestamp":"2026-09-24 15:15:19","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 8ms","timestamp":"2026-09-24 15:15:26","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: sNBZBZYAMm7FvCRDAAAU","timestamp":"2026-09-24 15:15:59"}
+{"level":"info","message":"[Socket] Connected: 2Xhd4bVXP4hn9EITAAAW | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-09-24 15:16:53"}
+{"level":"info","message":"[Socket] Disconnected: 2Xhd4bVXP4hn9EITAAAW","timestamp":"2026-09-24 15:16:55"}
+{"level":"info","message":"[Socket] Connected: yBYEC14ek2R9sBYlAAAZ | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-09-24 15:16:58"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/auth/me 200 — 57ms","timestamp":"2026-09-24 15:16:58","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/categories/active 200 — 59ms","timestamp":"2026-09-24 15:16:58","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/products?page=1&limit=100 200 — 90ms","timestamp":"2026-09-24 15:16:58","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/products 200 — 18ms","timestamp":"2026-09-24 15:16:58","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/flavors?page=1&limit=100 200 — 19ms","timestamp":"2026-09-24 15:16:58","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/flavors/active 200 — 5ms","timestamp":"2026-09-24 15:16:59","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/categories?page=1&limit=100 200 — 6ms","timestamp":"2026-09-24 15:16:59","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/users?page=1&limit=100 200 — 7ms","timestamp":"2026-09-24 15:16:59","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/stock 200 — 10ms","timestamp":"2026-09-24 15:16:59","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders?page=1&limit=1 200 — 32ms","timestamp":"2026-09-24 15:16:59","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/payment-numbers 200 — 9ms","timestamp":"2026-09-24 15:16:59","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 17ms","timestamp":"2026-09-24 15:17:00","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 19ms","timestamp":"2026-09-24 15:17:02","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders?page=1&limit=50 200 — 12ms","timestamp":"2026-09-24 15:17:04","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"POST /api/auth/logout 200 — 32ms","timestamp":"2026-09-24 15:17:11","userId":"577dca8f-6f0e-4b76-8ee3-814b160a67bc"}
+{"level":"info","message":"[Socket] Disconnected: yBYEC14ek2R9sBYlAAAZ","timestamp":"2026-09-24 15:17:11"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"POST /api/auth/google 200 — 17ms","timestamp":"2026-09-24 15:17:13","userId":"-"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/categories/active 200 — 2ms","timestamp":"2026-09-24 15:17:14","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"level":"info","message":"[Socket] Connected: YHyJVV344Ul_1nE1AAAb | User: 577dca8f-6f0e-4b76-8ee3-814b160a67bc","timestamp":"2026-09-24 15:17:14"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/products 200 — 29ms","timestamp":"2026-09-24 15:17:14","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/flavors/active 200 — 4ms","timestamp":"2026-09-24 15:17:14","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders/my-orders?page=1&limit=50 200 — 7ms","timestamp":"2026-09-24 15:17:14","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"GET /api/orders/my-orders?page=1&limit=1 200 — 6ms","timestamp":"2026-09-24 15:17:14","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"ip":"::ffff:192.168.1.22","level":"info","message":"DELETE /api/auth/account 200 — 13ms","timestamp":"2026-09-24 15:17:22","userId":"c2f09762-eb83-40c7-af4d-b86aad0e8d86"}
+{"level":"info","message":"[Socket] Disconnected: YHyJVV344Ul_1nE1AAAb","timestamp":"2026-09-24 15:17:22"}
+{"body":{"idToken":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxMGY4NzQwNWE5NzljMWRmMzZkZjI2NjA2NzM0ZjMzY2Q4NWMyNzEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5OTUyNTIwNTE0NTEtMGlsNGphN2tyZW9xdTQ1MHJoa3I5N21zOGltN3YxZjIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5OTUyNTIwNTE0NTEtNjMwamI0ZzY4YTRwc2M5dTlpbDlydGVzNnM0dG44cWouYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTI5MjE2NjI2MTgzODAzODA2ODAiLCJlbWFpbCI6Im1yLmhvdWRhMjAwMUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6Ik1haG1vdWQgRWxzYXllZCIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NKazFXR3hsMG9jODFYdk5jMFNIVmJMWGRtLXJDbXk0VmpZTTYzSnpKV1VXamhFbDhlc1d3PXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6Ik1haG1vdWQiLCJmYW1pbHlfbmFtZSI6IkVsc2F5ZWQiLCJpYXQiOjE3OTAyNTEwNzMsImV4cCI6MTc5MDI1NDY3M30.i-nTQUewe3x1ybKZRrR8TpNtU7BZr5JbuO7URyXl0rBCiq7pWJ46qPg5hi_ddUAWdx_pHS0YutcQdPHurnW4c5g6AqDt-Ktd2ivo4585IMMtssC2LFGInHPA5w0vMUlpMywUwpeF8rLuceBze_fLZs8GJtbLSsf8bXZUg9M8sIdLlwYSWS7oa6p0T0ZjDpUBH3lciMIb-lXVHV6wxZV132v4O6rRt2wsVbLrwRDHJEtRriGJ7ApZUUj4KezeBtBYrwRUncKpNXfg43im_PSLiBJIagO2HsfaQEPN2UdEUYoW26Isyy0DshRRjFY_MRZNqNyPfWKVTvOwNZjwfJJNGw"},"level":"error","message":"[POST] /api/auth/google — Account is deactivated","stack":"Error: Account is deactivated\n    at AuthService.googleLogin (D:\\Training\\Java\\java_backend\\services\\auth.service.js:177:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async googleLogin (D:\\Training\\Java\\java_backend\\controllers\\auth.controller.js:54:22)","timestamp":"2026-09-24 15:17:26","userId":"unauthenticated"}
+{"ip":"::ffff:192.168.1.22","level":"warn","message":"POST /api/auth/google 401 — 22ms","timestamp":"2026-09-24 15:17:26","userId":"-"}
+{"body":{"idToken":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxMGY4NzQwNWE5NzljMWRmMzZkZjI2NjA2NzM0ZjMzY2Q4NWMyNzEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5OTUyNTIwNTE0NTEtMGlsNGphN2tyZW9xdTQ1MHJoa3I5N21zOGltN3YxZjIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5OTUyNTIwNTE0NTEtNjMwamI0ZzY4YTRwc2M5dTlpbDlydGVzNnM0dG44cWouYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTI5MjE2NjI2MTgzODAzODA2ODAiLCJlbWFpbCI6Im1yLmhvdWRhMjAwMUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6Ik1haG1vdWQgRWxzYXllZCIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NKazFXR3hsMG9jODFYdk5jMFNIVmJMWGRtLXJDbXk0VmpZTTYzSnpKV1VXamhFbDhlc1d3PXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6Ik1haG1vdWQiLCJmYW1pbHlfbmFtZSI6IkVsc2F5ZWQiLCJpYXQiOjE3OTAyNTEwNzMsImV4cCI6MTc5MDI1NDY3M30.i-nTQUewe3x1ybKZRrR8TpNtU7BZr5JbuO7URyXl0rBCiq7pWJ46qPg5hi_ddUAWdx_pHS0YutcQdPHurnW4c5g6AqDt-Ktd2ivo4585IMMtssC2LFGInHPA5w0vMUlpMywUwpeF8rLuceBze_fLZs8GJtbLSsf8bXZUg9M8sIdLlwYSWS7oa6p0T0ZjDpUBH3lciMIb-lXVHV6wxZV132v4O6rRt2wsVbLrwRDHJEtRriGJ7ApZUUj4KezeBtBYrwRUncKpNXfg43im_PSLiBJIagO2HsfaQEPN2UdEUYoW26Isyy0DshRRjFY_MRZNqNyPfWKVTvOwNZjwfJJNGw"},"level":"error","message":"[POST] /api/auth/google — Account is deactivated","stack":"Error: Account is deactivated\n    at AuthService.googleLogin (D:\\Training\\Java\\java_backend\\services\\auth.service.js:177:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async googleLogin (D:\\Training\\Java\\java_backend\\controllers\\auth.controller.js:54:22)","timestamp":"2026-09-24 15:17:33","userId":"unauthenticated"}
+{"ip":"::ffff:192.168.1.22","level":"warn","message":"POST /api/auth/google 401 — 4ms","timestamp":"2026-09-24 15:17:33","userId":"-"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-09-24 15:22:30"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-09-24 15:22:30"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-09-24 15:22:30"}
