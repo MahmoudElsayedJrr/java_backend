@@ -25,6 +25,7 @@ const {
   BadRequestError,
 } = require("../utils/errors");
 
+const jwt = require("jsonwebtoken");
 const { AUDIT_ACTIONS } = require("../constants");
 
 const SALT_ROUNDS = 12;
@@ -206,6 +207,57 @@ class AuthService {
     return { user: safeUser, accessToken, refreshToken };
   }
 
+  // ── Apple Login ───────────────────────────────────────────
+  async appleLogin(idToken, name) {
+    if (!idToken) throw new BadRequestError("Apple ID Token is required");
+
+    let payload;
+    try {
+      payload = jwt.decode(idToken);
+      if (!payload || !payload.sub) {
+        throw new Error("Invalid token payload");
+      }
+    } catch (err) {
+      throw new UnauthorizedError("Invalid Apple ID Token");
+    }
+
+    const email = payload.email || `${payload.sub}@privaterelay.appleid.com`;
+
+    let user = await userRepo.findByEmail(email);
+
+    if (user) {
+      if (!user.active) throw new UnauthorizedError("Account is deactivated");
+    } else {
+      const randomPassword = crypto.randomBytes(16).toString("hex");
+      const hashed = await bcrypt.hash(randomPassword, SALT_ROUNDS);
+
+      user = await userRepo.createUser({
+        name: name || (email.includes("@") ? email.split("@")[0] : "Apple User"),
+        email: email,
+        password: hashed,
+        role: "CUSTOMER",
+        active: true,
+        emailVerified: true,
+      });
+    }
+
+    const tokenPayload = { id: user.id, role: user.role };
+    const accessToken = signAccessToken(tokenPayload);
+    const refreshToken = signRefreshToken(tokenPayload);
+    const expiresAt = new Date(Date.now() + REFRESH_TTL_MS);
+    await refreshTokenRepo.create(user.id, refreshToken, expiresAt);
+
+    await auditLogRepo.log({
+      userId: user.id,
+      action: AUDIT_ACTIONS.LOGIN,
+      entity: "User",
+      entityId: user.id,
+    });
+
+    const { password: _, ...safeUser } = user;
+    return { user: safeUser, accessToken, refreshToken };
+  }
+
   // ── Forgot Password ───────────────────────────────────────
   async forgotPassword(email) {
     const user = await userRepo.findByEmail(email);
@@ -231,7 +283,6 @@ class AuthService {
     const hashed = await bcrypt.hash(newPassword, SALT_ROUNDS);
     await userRepo.updateUser(user.id, { password: hashed });
 
-    // Revoke all refresh tokens for security
     await refreshTokenRepo.revokeAllForUser(user.id);
 
     await auditLogRepo.log({
@@ -308,11 +359,41 @@ class AuthService {
     if (!user) throw new NotFoundError("User not found");
     return user;
   }
+
+  // ── Update Profile ────────────────────────────────────────
+  async updateProfile(userId, name) {
+    const user = await userRepo.findByIdSafe(userId);
+    if (!user) throw new NotFoundError("User not found");
+
+    const updated = await userRepo.updateUser(userId, { name });
+    await auditLogRepo.log({
+      userId,
+      action: "PROFILE_UPDATED",
+      entity: "User",
+      entityId: userId,
+    });
+    return updated;
+  }
+
+  // ── Delete Account ────────────────────────────────────────
+  async deleteAccount(userId) {
+    const user = await userRepo.findByIdSafe(userId);
+    if (!user) throw new NotFoundError("User not found");
+
+    await refreshTokenRepo.revokeAllForUser(userId);
+    await userRepo.updateUser(userId, { active: false });
+    await auditLogRepo.log({
+      userId,
+      action: "ACCOUNT_DELETED",
+      entity: "User",
+      entityId: userId,
+    });
+    return { message: "Account deleted successfully" };
+  }
 }
 
 // ── Private helper ────────────────────────────────────────────
 async function _sendCode(email, name, type) {
-  // احذف الأكواد القديمة الأول
   await codeRepo.deleteOldCodes(email, type);
 
   const code = _generateCode();

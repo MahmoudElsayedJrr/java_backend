@@ -58,6 +58,16 @@ class AuthController {
     }
   }
 
+  async appleLogin(req, res, next) {
+    try {
+      const { idToken, name } = req.body;
+      const result = await authService.appleLogin(idToken, name);
+      sendSuccess(res, { data: result, message: "Login successful" });
+    } catch (err) {
+      next(err);
+    }
+  }
+
   async forgotPassword(req, res, next) {
     try {
       const result = await authService.forgotPassword(req.body.email);
@@ -115,6 +125,25 @@ class AuthController {
     try {
       const user = await authService.getMe(req.user.id);
       sendSuccess(res, { data: user });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async updateProfile(req, res, next) {
+    try {
+      const { name } = req.body;
+      const user = await authService.updateProfile(req.user.id, name);
+      sendSuccess(res, { data: user, message: "Profile updated successfully" });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async deleteAccount(req, res, next) {
+    try {
+      await authService.deleteAccount(req.user.id);
+      sendSuccess(res, { message: "Account deleted successfully" });
     } catch (err) {
       next(err);
     }

@@ -23,6 +23,7 @@ router.post(
 );
 router.post("/login", authLimiter, validate(v.login), ctrl.login);
 router.post("/google", authLimiter, ctrl.googleLogin);
+router.post("/apple", authLimiter, ctrl.appleLogin);
 router.post(
   "/forgot-password",
   authLimiter,
@@ -46,5 +47,7 @@ router.post(
   validate(v.changePassword),
   ctrl.changePassword,
 );
+router.patch("/profile", authenticate, ctrl.updateProfile);
+router.delete("/account", authenticate, ctrl.deleteAccount);
 
 module.exports = router;
