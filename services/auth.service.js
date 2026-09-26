@@ -160,12 +160,36 @@ class AuthService {
 
     let payload;
     try {
+      const allowedAudiences = [
+        process.env.GOOGLE_CLIENT_ID,
+        "995252051451-630jb4g68a4psc9u9il9rtes6s4tn8qj.apps.googleusercontent.com",
+        "995252051451-0il4ja7kreoqu450rhkr97ms8im7v1f2.apps.googleusercontent.com",
+      ].filter(Boolean);
+
       const ticket = await googleClient.verifyIdToken({
         idToken: idToken,
-        audience: process.env.GOOGLE_CLIENT_ID,
+        audience: allowedAudiences,
       });
       payload = ticket.getPayload();
     } catch (err) {
+      console.warn("googleClient.verifyIdToken failed, attempting Google tokeninfo fallback:", err.message);
+      try {
+        const res = await fetch(`https://oauth2.googleapis.com/tokeninfo?id_token=${encodeURIComponent(idToken)}`);
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.email) {
+            payload = {
+              ...data,
+              email_verified: data.email_verified === "true" || data.email_verified === true,
+            };
+          }
+        }
+      } catch (fetchErr) {
+        console.error("Google tokeninfo fallback error:", fetchErr);
+      }
+    }
+
+    if (!payload || !payload.email) {
       throw new UnauthorizedError("Invalid Google ID Token");
     }
 

@@ -24,6 +24,14 @@ class ProductRepository extends BaseRepository {
     });
   }
 
+  findManyFull(options = {}) {
+    return this.model.findMany({
+      ...options,
+      include: PRODUCT_INCLUDE,
+      orderBy: options.orderBy || { createdAt: "desc" },
+    });
+  }
+
   findActiveByCategory(categoryId) {
     return this.model.findMany({
       where: { categoryId, active: true },

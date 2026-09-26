@@ -81,6 +81,21 @@ const SOCKET_EVENTS = Object.freeze({
 // Change SHIPPING_FEE in .env to update without touching code
 const SHIPPING_FEE = parseFloat(process.env.SHIPPING_FEE || 15);
 
+// Category display sort order
+const CATEGORY_ORDER = Object.freeze([
+  "Ice Coffee",
+  "Hot Coffee",
+  "Specialty Coffee",
+  "Turkish Coffee",
+  "Non-Coffee",
+  "Blended",
+  "Soft Drinks",
+  "Matcha",
+  "Exclusive Items",
+  "Dessert",
+  "Bakery",
+]);
+
 module.exports = {
   ROLES,
   ORDER_STATUS,
@@ -92,4 +107,5 @@ module.exports = {
   AUDIT_ACTIONS,
   SOCKET_EVENTS,
   SHIPPING_FEE,
+  CATEGORY_ORDER,
 };

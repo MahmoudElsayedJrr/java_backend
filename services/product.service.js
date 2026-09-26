@@ -10,13 +10,30 @@ const { parsePagination } = require('../utils/helpers');
 const { getIO }           = require('../sockets');
 
 class ProductService {
-  async getAll(query, userId) {
-    const { page, limit, skip } = parsePagination(query);
+  async getAll(query = {}, userId) {
     const where = {};
-    if (query.active !== undefined)    where.active     = query.active === 'true';
-    if (query.categoryId)              where.categoryId = query.categoryId;
+    if (query.active !== undefined && query.active !== 'all') {
+      where.active = query.active === 'true';
+    }
+    if (query.categoryId) where.categoryId = query.categoryId;
 
-    const { data, total } = await productRepo.findAllPaginated({ skip, take: limit, where });
+    let data;
+    let total;
+    let page = 1;
+    let limit = 1000;
+
+    if (query.page !== undefined || (query.limit !== undefined && query.all !== 'true')) {
+      const pagination = parsePagination(query);
+      page = pagination.page;
+      limit = pagination.limit;
+      const result = await productRepo.findAllPaginated({ skip: pagination.skip, take: limit, where });
+      data = result.data;
+      total = result.total;
+    } else {
+      data = await productRepo.findManyFull({ where });
+      total = data.length;
+      limit = total;
+    }
 
     if (userId) {
       const userFavs = await prisma.favoriteProduct.findMany({
@@ -49,7 +66,7 @@ class ProductService {
   async getByCategory(categoryId, userId) {
     const category = await categoryRepo.findById(categoryId);
     if (!category) throw new NotFoundError('Category not found');
-    const data = await productRepo.findActiveByCategory(categoryId);
+    const data = await productRepo.findManyFull({ where: { categoryId }, orderBy: { name: 'asc' } });
 
     if (userId) {
       const userFavs = await prisma.favoriteProduct.findMany({

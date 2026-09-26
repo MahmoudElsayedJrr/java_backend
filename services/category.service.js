@@ -2,8 +2,19 @@ const categoryRepo  = require('../repositories/category.repository');
 const auditLogRepo  = require('../repositories/auditLog.repository');
 const { uploadCategoryImage, deleteCategoryImage } = require('../utils/storage');
 const { NotFoundError, ConflictError } = require('../utils/errors');
-const { AUDIT_ACTIONS }  = require('../constants');
+const { AUDIT_ACTIONS, CATEGORY_ORDER }  = require('../constants');
 const { parsePagination } = require('../utils/helpers');
+
+const sortCategories = (list) => {
+  return [...list].sort((a, b) => {
+    const indexA = CATEGORY_ORDER.indexOf(a.name);
+    const indexB = CATEGORY_ORDER.indexOf(b.name);
+    const posA = indexA === -1 ? 999 : indexA;
+    const posB = indexB === -1 ? 999 : indexB;
+    if (posA !== posB) return posA - posB;
+    return a.name.localeCompare(b.name);
+  });
+};
 
 class CategoryService {
   async getAll(query) {
@@ -12,11 +23,12 @@ class CategoryService {
     if (query.active !== undefined) where.active = query.active === 'true';
 
     const { data, total } = await categoryRepo.findAllPaginated({ skip, take: limit, where });
-    return { data, total, page, limit };
+    return { data: sortCategories(data), total, page, limit };
   }
 
   async getAllActive() {
-    return categoryRepo.findAllActive();
+    const list = await categoryRepo.findAllActive();
+    return sortCategories(list);
   }
 
   async getById(id) {

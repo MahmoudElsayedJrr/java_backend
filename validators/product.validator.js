@@ -23,10 +23,11 @@ const update = Joi.object({
 }).min(1);
 
 const listQuery = Joi.object({
-  page:       Joi.number().integer().min(1).default(1),
-  limit:      Joi.number().integer().min(1).max(100).default(10),
+  page:       Joi.number().integer().min(1),
+  limit:      Joi.number().integer().min(1).max(1000),
   active:     Joi.string().valid('true', 'false'),
   categoryId: Joi.string().uuid(),
+  all:        Joi.string().valid('true', 'false'),
 });
 
 module.exports = { create, update, listQuery };
