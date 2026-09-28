@@ -235,53 +235,54 @@ class OrderService {
         tx,
       );
 
-      // Automatic Stock Deduction (Explicit Recipe or Keyword Fallback e.g. water/soft drinks)
-      for (const item of enrichedItems) {
-        try {
-          let recipes = [];
-          if (tx.productRecipe) {
-            recipes = await tx.productRecipe.findMany({
-              where: { productId: item.productId },
-            });
-          }
+      return created;
+    });
 
-          if (recipes && recipes.length > 0) {
-            for (const recipe of recipes) {
-              const deductQty = parseFloat(recipe.quantity || 1) * item.quantity;
-              await tx.stockItem.update({
-                where: { id: recipe.stockItemId },
+    // Automatic Stock Deduction (Explicit Recipe or Keyword Fallback e.g. water/soft drinks)
+    // Run outside the transaction so stock deduction errors never abort or roll back order creation
+    for (const item of enrichedItems) {
+      try {
+        let recipes = [];
+        if (prisma.productRecipe) {
+          recipes = await prisma.productRecipe.findMany({
+            where: { productId: item.productId },
+          });
+        }
+
+        if (recipes && recipes.length > 0) {
+          for (const recipe of recipes) {
+            const deductQty = parseFloat(recipe.quantity || 1) * item.quantity;
+            await prisma.stockItem.update({
+              where: { id: recipe.stockItemId },
+              data: { quantity: { decrement: deductQty } },
+            }).catch(() => {});
+          }
+        } else {
+          const prodName = (item.name || "").trim().toLowerCase();
+          if (prodName) {
+            const stockItems = await prisma.stockItem.findMany();
+            const matchedStock = stockItems.find((s) => {
+              const stockName = (s.name || "").trim().toLowerCase();
+              return (
+                prodName === stockName ||
+                prodName.includes(stockName) ||
+                stockName.includes(prodName)
+              );
+            });
+
+            if (matchedStock) {
+              const deductQty = item.quantity;
+              await prisma.stockItem.update({
+                where: { id: matchedStock.id },
                 data: { quantity: { decrement: deductQty } },
               }).catch(() => {});
             }
-          } else {
-            const prodName = (item.name || "").trim().toLowerCase();
-            if (prodName) {
-              const stockItems = await tx.stockItem.findMany();
-              const matchedStock = stockItems.find((s) => {
-                const stockName = (s.name || "").trim().toLowerCase();
-                return (
-                  prodName === stockName ||
-                  prodName.includes(stockName) ||
-                  stockName.includes(prodName)
-                );
-              });
-
-              if (matchedStock) {
-                const deductQty = item.quantity;
-                await tx.stockItem.update({
-                  where: { id: matchedStock.id },
-                  data: { quantity: { decrement: deductQty } },
-                }).catch(() => {});
-              }
-            }
           }
-        } catch (err) {
-          logger.warn(`Auto stock deduction skipped for item ${item.productId}: ${err.message}`);
         }
+      } catch (err) {
+        logger.warn(`Auto stock deduction skipped for item ${item.productId}: ${err.message}`);
       }
-
-      return created;
-    });
+    }
 
     await auditLogRepo.log({
       userId,
