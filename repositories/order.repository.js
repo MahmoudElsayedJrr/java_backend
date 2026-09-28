@@ -55,7 +55,7 @@ class OrderRepository extends BaseRepository {
   sumByDateRange(startDate, endDate, cashierId = null) {
     const where = {
       createdAt: { gte: startDate, lte: endDate },
-      status: "DELIVERED",
+      OR: [{ status: "DELIVERED" }, { orderType: "DINE_IN", status: { not: "CANCELLED" } }],
       ...(cashierId ? { cashierId } : {}),
     };
 
@@ -71,7 +71,7 @@ class OrderRepository extends BaseRepository {
   dailyBreakdown(startDate, endDate) {
     return this.prisma.$queryRaw`
       SELECT
-        DATE("createdAt") AS date,
+        TO_CHAR("createdAt" - INTERVAL '3 hours', 'YYYY-MM-DD') AS date,
         COUNT(*)          AS "orderCount",
         SUM(total)        AS "salesTotal",
         SUM(discount)     AS "totalDiscount",
@@ -79,8 +79,8 @@ class OrderRepository extends BaseRepository {
       FROM orders
       WHERE "createdAt" >= ${startDate}
         AND "createdAt" <= ${endDate}
-        AND status = 'DELIVERED'
-      GROUP BY DATE("createdAt")
+        AND (status = 'DELIVERED' OR ("orderType" = 'DINE_IN' AND status != 'CANCELLED'))
+      GROUP BY TO_CHAR("createdAt" - INTERVAL '3 hours', 'YYYY-MM-DD')
       ORDER BY date ASC
     `;
   }

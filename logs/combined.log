@@ -9050,3 +9050,4 @@
 {"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-09-26 11:47:37"}
 {"level":"info","message":"✅ Database connected","timestamp":"2026-09-26 11:47:37"}
 {"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-09-26 11:47:37"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","timestamp":"2026-09-26 12:20:38"}

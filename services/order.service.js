@@ -220,7 +220,7 @@ class OrderService {
             orderNumber,
             cashierId: userId,
             paymentMethod,
-            paymentStatus: "PENDING",
+            paymentStatus: orderType === ORDER_TYPE.DELIVERY ? "PENDING" : "CONFIRMED",
             notes,
             orderType,
             deliveryAddress:
@@ -228,7 +228,7 @@ class OrderService {
             shippingFee,
             ...totals,
             total: finalTotal,
-            status: ORDER_STATUS.PENDING,
+            status: orderType === ORDER_TYPE.DELIVERY ? ORDER_STATUS.PENDING : ORDER_STATUS.DELIVERED,
           },
           items: enrichedItems,
         },
