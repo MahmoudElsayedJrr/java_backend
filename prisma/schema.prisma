@@ -108,6 +108,7 @@ model Product {
   productFlavors ProductFlavor[]
   orderItems     OrderItem[]
   favoriteProducts FavoriteProduct[]
+  productRecipes   ProductRecipe[]
   
   @@index([categoryId])
   @@index([active])
@@ -220,6 +221,7 @@ model StockItem {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  productRecipes ProductRecipe[]
   @@index([quantity])
   @@map("stock_items")
 }
@@ -264,4 +266,21 @@ model FavoriteProduct {
   @@index([userId])
   @@index([productId])
   @@map("favorite_products")
+}
+
+model ProductRecipe {
+  id          String    @id @default(uuid())
+  productId   String
+  stockItemId String
+  quantity    Decimal   @default(1) @db.Decimal(10, 2)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  product   Product   @relation(fields: [productId], references: [id], onDelete: Cascade)
+  stockItem StockItem @relation(fields: [stockItemId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, stockItemId])
+  @@index([productId])
+  @@index([stockItemId])
+  @@map("product_recipes")
 }
