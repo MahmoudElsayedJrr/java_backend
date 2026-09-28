@@ -5,12 +5,13 @@ function getDayBounds(dateInput) {
   let y, m, d;
   if (!dateInput) {
     const now = new Date();
-    if (now.getHours() < 3) {
-      now.setDate(now.getDate() - 1);
+    const cairoNow = new Date(now.getTime() + 3 * 3600 * 1000);
+    if (cairoNow.getUTCHours() < 3) {
+      cairoNow.setUTCDate(cairoNow.getUTCDate() - 1);
     }
-    y = now.getFullYear();
-    m = now.getMonth();
-    d = now.getDate();
+    y = cairoNow.getUTCFullYear();
+    m = cairoNow.getUTCMonth();
+    d = cairoNow.getUTCDate();
   } else if (typeof dateInput === "string") {
     const parts = dateInput.split("-").map(Number);
     if (parts.length === 3 && !isNaN(parts[0]) && !isNaN(parts[1]) && !isNaN(parts[2])) {
@@ -19,35 +20,40 @@ function getDayBounds(dateInput) {
       d = parts[2];
     } else {
       const dt = new Date(dateInput);
-      y = dt.getFullYear();
-      m = dt.getMonth();
-      d = dt.getDate();
+      y = dt.getUTCFullYear();
+      m = dt.getUTCMonth();
+      d = dt.getUTCDate();
     }
   } else if (dateInput instanceof Date) {
-    y = dateInput.getFullYear();
-    m = dateInput.getMonth();
-    d = dateInput.getDate();
+    const cairoDt = new Date(dateInput.getTime() + 3 * 3600 * 1000);
+    if (cairoDt.getUTCHours() < 3) {
+      cairoDt.setUTCDate(cairoDt.getUTCDate() - 1);
+    }
+    y = cairoDt.getUTCFullYear();
+    m = cairoDt.getUTCMonth();
+    d = cairoDt.getUTCDate();
   } else {
     const now = new Date();
-    if (now.getHours() < 3) {
-      now.setDate(now.getDate() - 1);
+    const cairoNow = new Date(now.getTime() + 3 * 3600 * 1000);
+    if (cairoNow.getUTCHours() < 3) {
+      cairoNow.setUTCDate(cairoNow.getUTCDate() - 1);
     }
-    y = now.getFullYear();
-    m = now.getMonth();
-    d = now.getDate();
+    y = cairoNow.getUTCFullYear();
+    m = cairoNow.getUTCMonth();
+    d = cairoNow.getUTCDate();
   }
 
-  // Full business day: 03:00:00.000 (y, m, d) to 02:59:59.999 (y, m, d + 1)
-  const startOfDay = new Date(y, m, d, 3, 0, 0, 0);
-  const endOfDay = new Date(y, m, d + 1, 2, 59, 59, 999);
+  // Cairo business day: 03:00:00 Cairo = 00:00:00 UTC, 02:59:59 Cairo next day = 23:59:59 UTC
+  const startOfDay = new Date(Date.UTC(y, m, d, 0, 0, 0, 0));
+  const endOfDay = new Date(Date.UTC(y, m, d, 23, 59, 59, 999));
 
-  // Shift 1 (Morning): 08:00:00.000 to 15:59:59.999 on day D
-  const morningStart = new Date(y, m, d, 8, 0, 0, 0);
-  const morningEnd = new Date(y, m, d, 15, 59, 59, 999);
+  // Shift 1 (Morning): 8:00 AM - 4:00 PM Cairo => 05:00:00 Z to 12:59:59 Z
+  const morningStart = new Date(Date.UTC(y, m, d, 5, 0, 0, 0));
+  const morningEnd = new Date(Date.UTC(y, m, d, 12, 59, 59, 999));
 
-  // Shift 2 (Evening/Night): 16:00:00.000 on day D to 02:59:59.999 on day D+1
-  const eveningStart = new Date(y, m, d, 16, 0, 0, 0);
-  const eveningEnd = new Date(y, m, d + 1, 2, 59, 59, 999);
+  // Shift 2 (Evening): 4:00 PM - 3:00 AM Cairo next day => 13:00:00 Z to 23:59:59 Z
+  const eveningStart = new Date(Date.UTC(y, m, d, 13, 0, 0, 0));
+  const eveningEnd = new Date(Date.UTC(y, m, d, 23, 59, 59, 999));
 
   const dateStr = `${y}-${String(m + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
 

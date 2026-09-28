@@ -71,7 +71,7 @@ class OrderRepository extends BaseRepository {
   dailyBreakdown(startDate, endDate) {
     return this.prisma.$queryRaw`
       SELECT
-        TO_CHAR("createdAt" - INTERVAL '3 hours', 'YYYY-MM-DD') AS date,
+        TO_CHAR("createdAt" AT TIME ZONE 'UTC', 'YYYY-MM-DD') AS date,
         COUNT(*)          AS "orderCount",
         SUM(total)        AS "salesTotal",
         SUM(discount)     AS "totalDiscount",
@@ -80,7 +80,7 @@ class OrderRepository extends BaseRepository {
       WHERE "createdAt" >= ${startDate}
         AND "createdAt" <= ${endDate}
         AND (status = 'DELIVERED' OR ("orderType" = 'DINE_IN' AND status != 'CANCELLED'))
-      GROUP BY TO_CHAR("createdAt" - INTERVAL '3 hours', 'YYYY-MM-DD')
+      GROUP BY TO_CHAR("createdAt" AT TIME ZONE 'UTC', 'YYYY-MM-DD')
       ORDER BY date ASC
     `;
   }
