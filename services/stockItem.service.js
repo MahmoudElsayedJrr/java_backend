@@ -1,3 +1,4 @@
+const prisma = require("../config/prisma");
 const stockRepo = require("../repositories/stockItem.repository");
 const auditLogRepo = require("../repositories/auditLog.repository");
 const {
@@ -32,13 +33,31 @@ class StockItemService {
     if (existing)
       throw new ConflictError("Stock item with this name already exists");
 
-    const item = await stockRepo.create({
+        const item = await stockRepo.create({
       name: data.name,
       unit: data.unit || "piece",
       quantity: data.quantity || 0,
       lowStock: data.lowStock || 10,
       notes: data.notes || null,
     });
+
+    if (data.productId) {
+      const qty = data.recipeQuantity ? parseFloat(data.recipeQuantity) : 1;
+      await prisma.productRecipe.upsert({
+        where: {
+          productId_stockItemId: {
+            productId: data.productId,
+            stockItemId: item.id,
+          },
+        },
+        update: { quantity: qty },
+        create: {
+          productId: data.productId,
+          stockItemId: item.id,
+          quantity: qty,
+        },
+      });
+    }
 
     await auditLogRepo.log({
       userId: actorId,
@@ -61,7 +80,32 @@ class StockItemService {
         throw new ConflictError("Stock item with this name already exists");
     }
 
-    const updated = await stockRepo.update(id, data);
+        const { productId, recipeQuantity, ...stockData } = data;
+    const updated = await stockRepo.update(id, stockData);
+
+    if (productId !== undefined) {
+      if (productId && productId.trim() !== "") {
+        const qty = recipeQuantity ? parseFloat(recipeQuantity) : 1;
+        await prisma.productRecipe.upsert({
+          where: {
+            productId_stockItemId: {
+              productId: productId,
+              stockItemId: id,
+            },
+          },
+          update: { quantity: qty },
+          create: {
+            productId: productId,
+            stockItemId: id,
+            quantity: qty,
+          },
+        });
+      } else {
+        await prisma.productRecipe.deleteMany({
+          where: { stockItemId: id },
+        });
+      }
+    }
 
     await auditLogRepo.log({
       userId: actorId,

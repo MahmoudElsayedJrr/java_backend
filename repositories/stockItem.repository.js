@@ -1,8 +1,19 @@
 const BaseRepository = require("./base.repository");
 
+
+const STOCK_INCLUDE = {
+  productRecipes: {
+    include: { product: { select: { id: true, name: true } } },
+  },
+};
+
 class StockItemRepository extends BaseRepository {
   constructor() {
     super("stockItem");
+  }
+
+  findByIdWithRecipes(id) {
+    return this.model.findUnique({ where: { id }, include: STOCK_INCLUDE });
   }
 
   findByName(name) {
@@ -10,6 +21,15 @@ class StockItemRepository extends BaseRepository {
   }
 
   findAllPaginated({ skip, take, where = {} }) {
+    return this.findWithPagination({
+      where,
+      include: STOCK_INCLUDE,
+      orderBy: { name: "asc" },
+      skip,
+      take,
+    });
+  }
+  _dummyOldFindAll({ skip, take, where = {} }) {
     return this.findWithPagination({
       where,
       orderBy: { name: "asc" },

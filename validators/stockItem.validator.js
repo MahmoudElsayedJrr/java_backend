@@ -21,6 +21,8 @@ const create = Joi.object({
   quantity: Joi.number().min(0).precision(2).default(0),
   lowStock: Joi.number().min(0).precision(2).default(10),
   notes: Joi.string().trim().max(500).allow("", null),
+  productId: Joi.string().uuid().allow("", null),
+  recipeQuantity: Joi.number().positive().allow(null),
 });
 
 const update = Joi.object({
