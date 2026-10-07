@@ -106,6 +106,11 @@ class OrderService {
     const where = {};
     if (query.status) where.status = query.status;
     if (query.orderType) where.orderType = query.orderType;
+    if (query.from || query.to) {
+      where.createdAt = {};
+      if (query.from) where.createdAt.gte = new Date(query.from);
+      if (query.to) where.createdAt.lte = new Date(query.to);
+    }
     const { data, total } = await orderRepo.findByCashier(cashierId, {
       skip,
       take: limit,
@@ -354,15 +359,19 @@ class OrderService {
       if (actorRole !== "ADMIN") {
         throw new ForbiddenError("Only admins can cancel orders");
       }
-    } else if (actorRole === "CUSTOMER") {
-      throw new ForbiddenError("Customers cannot update order status");
-    }
-
-    const allowed = ORDER_STATUS_TRANSITIONS[order.status];
-    if (!allowed.includes(newStatus)) {
-      throw new BadRequestError(
-        `Cannot transition order from ${order.status} to ${newStatus}`,
-      );
+      if (order.status === ORDER_STATUS.CANCELLED) {
+        throw new BadRequestError("Order is already cancelled");
+      }
+    } else {
+      if (actorRole === "CUSTOMER") {
+        throw new ForbiddenError("Customers cannot update order status");
+      }
+      const allowed = ORDER_STATUS_TRANSITIONS[order.status] || [];
+      if (!allowed.includes(newStatus)) {
+        throw new BadRequestError(
+          `Cannot transition order from ${order.status} to ${newStatus}`,
+        );
+      }
     }
 
     const updated = await orderRepo.update(id, { status: newStatus });
