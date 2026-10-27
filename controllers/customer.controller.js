@@ -1,6 +1,5 @@
 const customerService = require("../services/customer.service");
-const { sendSuccess } = require("../utils/response");
-const { paginate } = require("../utils/helpers");
+const { sendSuccess, paginate } = require("../utils/response");
 
 class CustomerController {
   async getAll(req, res, next) {
