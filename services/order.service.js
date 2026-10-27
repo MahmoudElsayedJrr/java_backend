@@ -151,6 +151,7 @@ class OrderService {
       notes,
       orderType,
       deliveryAddress,
+      customerId,
     } = data;
 
     // Customer can only make DELIVERY orders
