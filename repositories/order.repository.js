@@ -2,6 +2,7 @@ const BaseRepository = require("./base.repository");
 
 const ORDER_INCLUDE = {
   cashier: { select: { id: true, name: true } },
+  customer: { select: { id: true, name: true, phone: true } },
   orderItems: {
     include: {
       product: { select: { id: true, name: true } },
@@ -55,6 +56,7 @@ class OrderRepository extends BaseRepository {
   sumByDateRange(startDate, endDate, cashierId = null) {
     const where = {
       createdAt: { gte: startDate, lte: endDate },
+      paymentStatus: "CONFIRMED",
       OR: [{ status: "DELIVERED" }, { orderType: "DINE_IN", status: { not: "CANCELLED" } }],
       ...(cashierId ? { cashierId } : {}),
     };
@@ -79,6 +81,7 @@ class OrderRepository extends BaseRepository {
       FROM orders
       WHERE "createdAt" >= ${startDate}
         AND "createdAt" <= ${endDate}
+        AND "paymentStatus" = 'CONFIRMED'
         AND (status = 'DELIVERED' OR ("orderType" = 'DINE_IN' AND status != 'CANCELLED'))
       GROUP BY TO_CHAR("createdAt" AT TIME ZONE 'UTC', 'YYYY-MM-DD')
       ORDER BY date ASC
@@ -92,12 +95,13 @@ class OrderRepository extends BaseRepository {
   async createFull({ orderData, items }, tx) {
     const client = tx || this.prisma;
 
-    const { cashierId, ...restOrderData } = orderData;
+    const { cashierId, customerId, ...restOrderData } = orderData;
 
     const order = await client.order.create({
       data: {
         ...restOrderData,
         cashier: { connect: { id: cashierId } },
+        ...(customerId ? { customer: { connect: { id: customerId } } } : {}),
         orderItems: {
           create: items.map(
             ({ productId, quantity, unitPrice, notes, flavorIds }) => ({

@@ -16,6 +16,7 @@ const userRoutes = require("./routes/user.routes");
 const categoryRoutes = require("./routes/category.routes");
 
 const productRoutes = require("./routes/product.routes");
+const customerRoutes = require("./routes/customer.routes");
 
 const {
   flavorRouter,
@@ -56,6 +57,7 @@ app.use("/api/categories", categoryRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/flavors", flavorRouter);
 app.use("/api/stock", stockRouter);
+app.use("/api/customers", customerRoutes);
 app.use("/api/orders", orderRouter);
 app.use("/api/reports", reportRouter);
 app.use('/api/payment-numbers', paymentNumberRouter);

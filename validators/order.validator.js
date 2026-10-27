@@ -28,6 +28,7 @@ const create = Joi.object({
 
   discount: Joi.number().min(0).max(100).precision(2).default(0), // percentage 0–100
   notes:    Joi.string().trim().max(500).allow('', null),
+  customerId: Joi.string().uuid().allow('', null).optional(),
 });
 
 const updateStatus = Joi.object({

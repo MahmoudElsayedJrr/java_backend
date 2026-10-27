@@ -9056,3 +9056,16 @@
 {"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-09-28 04:24:04"}
 {"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-09-28 04:30:22"}
 {"level":"info","message":"✅ Database connected","timestamp":"2026-09-28 04:30:22"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-09-28 13:59:06"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-09-28 13:59:06"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-09-28 13:59:06"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","timestamp":"2026-09-28 14:32:12"}
+{"level":"warn","message":"Auto stock deduction skipped for item f760024c-727e-4e58-b5ce-06eb33db5f06: \nInvalid `tx.productRecipe.findMany()` invocation in\nD:\\Training\\Java\\java_backend\\services\\order.service.js:243:46\n\n  240 try {\n  241   let recipes = [];\n  242   if (tx.productRecipe) {\n→ 243     recipes = await tx.productRecipe.findMany(\nThe table `public.product_recipes` does not exist in the current database.","timestamp":"2026-09-28 14:42:54"}
+{"level":"warn","message":"[Socket Broadcast] getIO() is null, cannot emit order_created","timestamp":"2026-09-28 14:42:54"}
+{"level":"warn","message":"[Socket Broadcast] getIO() is null, cannot emit order_created","timestamp":"2026-09-28 14:47:13"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-09-28 14:50:52"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-09-28 14:50:52"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-09-28 14:50:52"}
+{"level":"info","message":"✅ Socket.IO initialized","timestamp":"2026-09-28 15:35:30"}
+{"level":"info","message":"✅ Database connected","timestamp":"2026-09-28 15:35:31"}
+{"level":"info","message":"Java Cafe POS API running on port 3000 [development]","timestamp":"2026-09-28 15:35:31"}

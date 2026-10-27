@@ -69,6 +69,7 @@ class ReportService {
 
     const validOrderWhere = (start, end) => ({
       createdAt: { gte: start, lte: end },
+      paymentStatus: "CONFIRMED",
       OR: [
         { status: "DELIVERED" },
         { orderType: "DINE_IN", status: { not: "CANCELLED" } },
@@ -149,6 +150,7 @@ class ReportService {
 
     const validOrderWhere = (s, e) => ({
       createdAt: { gte: s, lte: e },
+      paymentStatus: "CONFIRMED",
       OR: [
         { status: "DELIVERED" },
         { orderType: "DINE_IN", status: { not: "CANCELLED" } },
@@ -278,6 +280,7 @@ async function _topProducts(start, end, cashierId = null) {
       JOIN products p ON p.id = oi."productId"
       WHERE o."createdAt" >= ${start}
         AND o."createdAt" <= ${end}
+        AND o."paymentStatus" = 'CONFIRMED'
         AND (o.status = 'DELIVERED' OR (o."orderType" = 'DINE_IN' AND o.status != 'CANCELLED'))
         AND o."cashierId" =  ${cashierId}
       GROUP BY p.id, p.name
@@ -295,7 +298,8 @@ async function _topProducts(start, end, cashierId = null) {
     JOIN products p ON p.id = oi."productId"
     WHERE o."createdAt" >= ${start}
       AND o."createdAt" <= ${end}
-      AND (o.status = 'DELIVERED' OR (o."orderType" = 'DINE_IN' AND o.status != 'CANCELLED'))
+      AND o."paymentStatus" = 'CONFIRMED'
+        AND (o.status = 'DELIVERED' OR (o."orderType" = 'DINE_IN' AND o.status != 'CANCELLED'))
     GROUP BY p.id, p.name
     ORDER BY "totalQuantity" DESC
     LIMIT 5

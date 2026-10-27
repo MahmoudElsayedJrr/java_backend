@@ -141,10 +141,24 @@ model ProductFlavor {
 }
 
 
+model Customer {
+  id        String   @id @default(uuid())
+  name      String
+  phone     String?
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  orders    Order[]
+
+  @@index([name])
+  @@map("store_customers")
+}
+
 model Order {
   id              String        @id @default(uuid())
   orderNumber     String        @unique
   cashierId       String
+  customerId      String?
   orderType       OrderType     @default(DINE_IN)
   deliveryAddress String?
   subtotal        Decimal       @db.Decimal(10, 2)
@@ -159,8 +173,10 @@ model Order {
   createdAt       DateTime      @default(now())
   updatedAt       DateTime      @updatedAt
   cashier    User        @relation(fields: [cashierId], references: [id], onDelete: Restrict)
+  customer   Customer?   @relation(fields: [customerId], references: [id], onDelete: SetNull)
   orderItems OrderItem[]
   @@index([cashierId])
+  @@index([customerId])
   @@index([status])
   @@index([orderType])
   @@index([paymentStatus])

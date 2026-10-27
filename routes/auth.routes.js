@@ -4,7 +4,7 @@ const ctrl = require("../controllers/auth.controller");
 
 const { authenticate } = require("../middlewares/auth");
 const { validate } = require("../middlewares/validate");
-const { authLimiter } = require("../middlewares/rateLimiter");
+const { authLimiter, refreshLimiter } = require("../middlewares/rateLimiter");
 const v = require("../validators/auth.validator");
 
 // ── Public (no auth) ─────────────────────────────────────────
@@ -36,7 +36,7 @@ router.post(
   validate(v.resetPassword),
   ctrl.resetPassword,
 );
-router.post("/refresh", authLimiter, validate(v.refresh), ctrl.refresh);
+router.post("/refresh", refreshLimiter, validate(v.refresh), ctrl.refresh);
 
 // ── Protected (needs auth) ────────────────────────────────────
 router.post("/logout", authenticate, ctrl.logout);

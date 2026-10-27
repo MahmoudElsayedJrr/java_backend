@@ -225,7 +225,8 @@ class OrderService {
             orderNumber,
             cashierId: userId,
             paymentMethod,
-            paymentStatus: orderType === ORDER_TYPE.DELIVERY ? "PENDING" : "CONFIRMED",
+            paymentStatus: customerId ? "PENDING" : (orderType === ORDER_TYPE.DELIVERY ? "PENDING" : "CONFIRMED"),
+            customerId: customerId || null,
             notes,
             orderType,
             deliveryAddress:
@@ -316,7 +317,7 @@ class OrderService {
   }
 
   // ── Confirm payment (Admin or Cashier) ────────────────────
-  async confirmPayment(orderId, actorId) {
+  async confirmPayment(orderId, actorId, paymentMethod = null) {
     const order = await orderRepo.findByIdFull(orderId);
     if (!order) throw new NotFoundError("Order not found");
 
@@ -324,9 +325,9 @@ class OrderService {
       throw new BadRequestError("Payment already confirmed");
     }
 
-    const updated = await orderRepo.update(orderId, {
-      paymentStatus: "CONFIRMED",
-    });
+    const updateData = { paymentStatus: "CONFIRMED" };
+    if (paymentMethod) updateData.paymentMethod = paymentMethod;
+    const updated = await orderRepo.update(orderId, updateData);
 
     await auditLogRepo.log({
       userId: actorId,

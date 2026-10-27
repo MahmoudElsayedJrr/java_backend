@@ -10,25 +10,36 @@ const _handler = (_req, res) => {
 };
 
 /**
- * General API rate limiter
+ * General API rate limiter (generous for POS operational environments)
  */
 const apiLimiter = rateLimit({
   windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS || 900000),   // 15 min
-  max:      parseInt(process.env.RATE_LIMIT_MAX       || 100),
+  max:      parseInt(process.env.RATE_LIMIT_MAX       || 1500),     // 1500 requests per 15 min
   standardHeaders: true,
   legacyHeaders:   false,
   handler: _handler,
 });
 
 /**
- * Strict limiter for auth endpoints
+ * Limiter for auth login & registration
  */
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,  // 15 min
-  max:      10,               // 10 login attempts per window
+  max:      parseInt(process.env.AUTH_RATE_LIMIT_MAX || 120),  // 120 attempts per window (avoids cafe Wi-Fi lockout)
   standardHeaders: true,
   legacyHeaders:   false,
   handler: _handler,
 });
 
-module.exports = { apiLimiter, authLimiter };
+/**
+ * Dedicated limiter for token refresh (prevents session expiry loop from blocking login)
+ */
+const refreshLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max:      500, // 500 token refreshes per window
+  standardHeaders: true,
+  legacyHeaders:   false,
+  handler: _handler,
+});
+
+module.exports = { apiLimiter, authLimiter, refreshLimiter };
